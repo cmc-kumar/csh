@@ -1,0 +1,44 @@
+﻿
+ol li span.thecon {
+    display: none;
+}
+ol {
+    margin-left: 15px;
+}
+div#main_content input {
+    display: inline;
+    margin: 0 2px 0 8px;
+}
+div#search_input + input[type="submit"] {
+    background: none repeat scroll 0 0 #003b55;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    font-family: Arial,sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: -3px;
+    padding: 5px 10px;
+}
+div#left_rail:first-child + div#main_right_unit div#main_content_right_rail_unit:first-child div#main_content {
+    margin: 0 20px;
+    width: auto;
+}
+div.control_panel {
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    margin: 0.5em 0;
+    padding: 1em 0px 1em 0px;
+}
+
+div.control_panel > div:first-child {
+ float:right; 
+}
+
+@media only screen and (max-width:640px) {
+  .responsive div.control_panel > div:first-child {
+ float:none; 
+}
+}

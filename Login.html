@@ -1,0 +1,764 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="robots" content="index, follow"/>
+
+            <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+            <link rel="icon" type="image/ico" href="favicon.ico"/>
+            <link rel="apple-touch-icon" href="favicon.ico"/>
+
+
+    <link href="css/global_css/global_framework_1.css" type="text/css" rel="stylesheet"/>
+    <link href="css/global_css/default_styles_1.css" type="text/css" rel="stylesheet"/>
+    <link href="css/katabat_css/core/katabat_core_1.css" type="text/css"
+          rel="stylesheet"/>
+    <link href="css/katabat_core_2_css/katabat_core_2.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="css/cmc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/client.css" rel="stylesheet" type="text/css"/>
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+     <link href="css/select2.min.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/jquery-3.5.1.js" type="text/javascript"></script>
+    <script>
+        var enter_label = "Enter",
+            enter_as_label = "Enter as a",
+            enter_as_currency = "Enter in currency format",
+            enter_as_text = "Enter as Text",
+            date_format_label_prefix = "Date Format",
+            required_label = "required",
+            selected_option_label= "Selected",
+            siteDateFormat_label = "Month Day , Year",
+            dropdown_count_label = "There are {0} items in the list",
+            dropdown_count_endOfList = "End of list",
+            page_title_screen_reader_suffix = "Last 4 digits of Account Number, ";
+
+    </script>
+    <style type="text/css">
+      .ui-datepicker .ui-datepicker-title {
+        margin: 0px 1.3em;
+        line-height: 1.8em;
+        text-align: center;
+      }
+    </style>
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    <style>
+
+        .borderRight {
+            border-right: 0px solid #333 !important;
+        }
+
+        .borderRightActive {
+            border-right: 1px solid #333 !important;
+        }
+
+        .hideInputValue {
+            color:transparent !important;
+        }
+
+        ul.list-nobullet{
+            display: table-cell;
+            margin: 0px 0px 0px 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        ul.list-nobullet li{
+            padding: 0 0 0 0 !important;
+            background: none !important;
+        }
+
+        ul.list-nobullet li:before{
+            content: none !important;
+            margin-left: 0 !important;
+        }
+
+        .additional_larger {
+            position: absolute;
+            margin: -2em 0 0 290px;
+            font-size: 14px;
+            color: #fff;
+            text-align: right;
+        }
+
+        .additional_small_medium{
+            position: absolute;
+            margin: -2em 0 0 92%;
+            font-size: 14px;
+            color: #fff;
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body class="responsive login_page">
+
+
+<div id="page_center" role="main">
+    <div id="page_center_container">
+        <div id='content'>
+            <div id='content_container'>
+                <div id='header'>
+                    <div id='header_container'>
+
+           <div id="mobile_nav" class="small medium no-print">
+              <ul>
+                <li class="icon">
+                </li>
+                <li>
+                </li>
+                <li class="icon">
+                  <a href="/html/acctSummary">
+                    <img class="logo" role="img" alt="Katabat" src="images/logo/logo.png">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="user_logout" class="large no-print">
+            </div>
+
+            <script type="text/javascript">
+             function changeDefaultLanguage(selectLanguage){
+                  if(selectLanguage == 'mobile') {
+                    console.log($( "#mobLanguagePreference option:selected" ).val());
+                    var languagePreference = $( "#mobLanguagePreference option:selected" ).val();
+                  }else {
+                    console.log($( "#languagePreference option:selected" ).val());
+                    var languagePreference = $( "#languagePreference option:selected" ).val();
+                  }
+
+                  var currentUrl = window.location.href;
+                  if(currentUrl.indexOf('security') < 0 && currentUrl.indexOf("") > -1){
+                    $.get('/lang/changeLang', {'lang': languagePreference}, function(result){
+                        try{
+                          clearInterval(hashInterval);
+                        }catch(e){}
+                        currentUrl = currentUrl.split('#')[0] + '#' + languagePreference;
+                        window.location.href = currentUrl;
+
+                        setTimeout(function(){
+                          window.location.reload();
+                        },100);
+                   });
+                  } else {
+                    <!--var url = new URL(currentUrl);-->
+                    <!--url.searchParams.set("lang", languagePreference); // setting your param-->
+                    <!--var newUrl = url.href;-->
+                    <!--window.location.href=newUrl;-->
+                     var newUrl=currentUrl.split("?")[0]+"?lang="+languagePreference
+                     window.location.href=newUrl
+
+                  }
+             }
+
+       function addOrUpdateUrlParam(name, value) {
+                   var href = window.location.href;
+          var regex = new RegExp("[&\\?]" + name + "=");
+          console.log("regex"+regex);
+          if(regex.test(href)) {
+          console.log("regex.test(href)"+regex.test(href));
+          regex = new RegExp("([&\\?])" + name + "=\\d+");
+          window.location.href = href.replace(regex, "$1" + name + "=" + value);
+          } else {
+          if(href.indexOf("?") > -1) {
+              window.location.href = href + "&" + name + "=" + value;
+          }else {
+              window.location.href = href.concat( "?").concat(name).concat( "=").concat(value);
+          }
+
+          console.log("window.location.href"+window.location.href);
+       }
+   }
+
+$(document).ready(function () {
+});
+</script>
+
+            <div class="clear"></div>
+
+
+            <div id="top_nav" class="large no-print">
+              <div id="top_nav_container">
+                <div class="multicolumn_row multicolumn_row_borderless">
+                  <div class="multicolumn_column top_logo_width">
+                    <div class="multicolumn_column_container">
+                      <a href="/html/acctSummary">
+                        <img role="img" alt="Katabat" src="images/logo/logo.png">
+                      </a>
+                      <div class="fit-logo" aria-hidden="true"></div>
+                      <div class="column_fill" aria-hidden="true">
+                      </div>
+                      <!-- End multicolumn_column_container -->
+                    </div>
+                    <!-- End multicolumn_column -->
+                  </div>
+                  <!-- End multicolumn_row -->
+                </div>
+              </div>
+            </div>
+
+                        <div class='clear'>
+                        </div>
+                        <!-- End header_container -->
+                    </div>
+                    <div class='clear'>
+                    </div>
+                    <!-- End header -->
+                </div>
+                <div id="main">
+                    <div id='main_container'>
+                        <form id="loginForm" action="/security/check" method="post">
+                            <input type="hidden" id="_tk" name="_tk" value="w-_M--avzDOq1Q1qSx4XsCdXmKiMKM29J3v0l7mp2Co">
+                            <input type="hidden" name="_X_SS_CSRFToken" value="B6EB1BF97D820EDC">
+                        <div id="main_right_unit">
+                            <div id="main_content_right_rail_unit">
+                                <div id="main_content" class="no_right_rail">
+                                    <div id="main_content_container">
+                                        <div id="title_main_content" class="page_title login_title">
+                                            <h1>Login</h1>
+                                            <!-- End title_main_content -->
+                                        </div>
+                                        <div class="article article_standard">
+                                            <p class="text">
+Take advantage of this opportunity to review your account(s) and the payment options available to you.                                            </p>
+                                            <!-- Article Ticket = ECM0000 -->
+                                            <!-- End article -->
+                                        </div>
+                                        <div class="clear">&nbsp;</div>
+
+
+
+                                        <div class="article article_standard login_table_box">
+                                            <table class="no_more_tables table-striped table-standard cf login_table">
+
+                                                    <tr class="bg_very_light_grey" id="firstNameTr">
+                                                        <td class="width_35">
+                                                            <p class="large">
+                                                                First Name
+                                                            </p>
+
+                                                            <p class="small medium left no_top_margin">
+                                                                First Name
+                                                            </p>
+
+                                                            <div class="clear"></div>
+                                                        </td>
+                                                        <td class="width_65" id="firstNameTd">
+                                                            <p>
+                                                                <input class=""
+                                                                       type="text"
+                                                                       placeholder="Enter First Name"
+                                                                       id="firstName"
+                                                                       name="firstName"
+                                                                       tabindex="0"
+                                                                       autofocus
+                                                                       maxlength="20"
+                                                                       autocomplete="off"
+                                                                       autocorrect="off"
+                                                                       autocapitalize="off"
+                                                                       aria-required="true"
+                                                                       aria-label="First Name"
+                                                                       onCopy="return false"
+                                                                       onDrag="return false"
+                                                                       onDrop="return false"
+                                                                       onkeypress="return isAlphaNumWithSpacesNDashes(event)"
+                                                                       onkeyup="javascript:convertToUpperCase(this)"
+                                                                />
+                                                            </p>
+
+                                                            <div class="clear"></div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="bg_very_light_grey" id="lastNameTr">
+                                                        <td class="width_35">
+                                                            <p class="large">
+                                                                Last Name
+                                                            </p>
+
+                                                            <p class="small medium left no_top_margin">
+                                                                Last Name
+                                                            </p>
+
+                                                            <div class="clear"></div>
+                                                        </td>
+                                                        <td class="width_65" id="lastNameTd">
+                                                            <p>
+                                                                <input class=""
+                                                                       type="text"
+                                                                       placeholder="Enter Last Name"
+                                                                       id="lastName"
+                                                                       name="lastName"
+                                                                       tabindex="0"
+                                                                       maxlength="20"
+                                                                       autofocus
+                                                                       autocomplete="off"
+                                                                       autocorrect="off"
+                                                                       autocapitalize="off"
+                                                                       onCopy="return false"
+                                                                       aria-required="true"
+                                                                       aria-label="Last Name"
+                                                                       onDrag="return false"
+                                                                       onDrop="return false"
+                                                                       onkeypress="return isAlphaNumWithSpacesNDashes(event)"
+                                                                       onkeyup="javascript:convertToUpperCase(this)"
+                                                                />
+                                                            </p>
+
+                                                            <div class="clear"></div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="bg_very_light_grey">
+                                                        <td class="width_35">
+                                                            <p class="large">
+                                                                Last 4 digits of Account Number
+                                                            </p>
+
+                                                            <p class="small medium left no_top_margin">
+                                                                Last 4 digits of Account Number
+                                                            </p>
+
+                                                            <div class="clear"></div>
+                                                        </td>
+                                                        <td class="width_65">
+
+                                                            <input class=""
+                                                                   type="text"
+                                                                   placeholder="Enter Last 4 digits of Account Number"
+                                                                   id="last4ActNum"
+                                                                   name="last4ActNum"
+                                                                   tabindex="0"
+                                                                   autocomplete="off"
+                                                                   autocorrect="off"
+                                                                   autocapitalize="off"
+                                                                   maxlength="4"
+                                                                   aria-required="true"
+                                                                   aria-label="Last 4 digits of Account Number"
+                                                                   onkeypress="return isTdbIntegerKey(event)"
+                                                            />
+
+                                                            <!--
+                            -->
+
+
+                                                            <div class="clear"></div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="bg_very_light_grey">
+                                                        <td class="width_35">
+                                                            <p class="large">
+                                                                Date of Birth
+                                                            </p>
+
+                                                            <p class="small medium left no_top_margin">
+                                                                Date of Birth
+                                                            </p>
+
+                                                            <div class="clear"></div>
+                                                        </td>
+                                                        <td class="width_65">
+
+                                                            <select class="no_top_margin"
+                                                                    tabindex="0"
+                                                                    name="birthMonth"
+                                                                    aria-required="true"
+                                                                    aria-describedby="dobError"
+                                                                    style="width: 85px"
+                                                                    aria-label="The month of Date of Birth">
+                                                                <option name="birthMonth" value="">Month</option>
+                                                                <option name="birthMonth" value="1" title="January">Jan</option>
+                                                                <option name="birthMonth" value="2" title="February">Feb</option>
+                                                                <option name="birthMonth" value="3" title="March">Mar</option>
+                                                                <option name="birthMonth" value="4" title="April">Apr</option>
+                                                                <option name="birthMonth" value="5" title="May">May</option>
+                                                                <option name="birthMonth" value="6" title="June">Jun</option>
+                                                                <option name="birthMonth" value="7" title="July">Jul</option>
+                                                                <option name="birthMonth" value="8" title="August">Aug</option>
+                                                                <option name="birthMonth" value="9" title="September">Sep</option>
+                                                                <option name="birthMonth" value="10" title="October">Oct</option>
+                                                                <option name="birthMonth" value="11" title="November">Nov</option>
+                                                                <option name="birthMonth" value="12" title="December">Dec</option>
+                                                            </select>
+
+                                                            <select class="no_top_margin"
+                                                                    tabindex="0"
+                                                                    name="birthDay"
+                                                                    aria-required="true"
+                                                                    aria-describedby="dobError"
+                                                                    style="width: 85px"
+                                                                    aria-label="The day of Date of Birth">
+                                                                <option name="birthDay" value="">Day</option>
+                                                                    <option name="birthDay" value="1">1</option>
+                                                                    <option name="birthDay" value="2">2</option>
+                                                                    <option name="birthDay" value="3">3</option>
+                                                                    <option name="birthDay" value="4">4</option>
+                                                                    <option name="birthDay" value="5">5</option>
+                                                                    <option name="birthDay" value="6">6</option>
+                                                                    <option name="birthDay" value="7">7</option>
+                                                                    <option name="birthDay" value="8">8</option>
+                                                                    <option name="birthDay" value="9">9</option>
+                                                                    <option name="birthDay" value="10">10</option>
+                                                                    <option name="birthDay" value="11">11</option>
+                                                                    <option name="birthDay" value="12">12</option>
+                                                                    <option name="birthDay" value="13">13</option>
+                                                                    <option name="birthDay" value="14">14</option>
+                                                                    <option name="birthDay" value="15">15</option>
+                                                                    <option name="birthDay" value="16">16</option>
+                                                                    <option name="birthDay" value="17">17</option>
+                                                                    <option name="birthDay" value="18">18</option>
+                                                                    <option name="birthDay" value="19">19</option>
+                                                                    <option name="birthDay" value="20">20</option>
+                                                                    <option name="birthDay" value="21">21</option>
+                                                                    <option name="birthDay" value="22">22</option>
+                                                                    <option name="birthDay" value="23">23</option>
+                                                                    <option name="birthDay" value="24">24</option>
+                                                                    <option name="birthDay" value="25">25</option>
+                                                                    <option name="birthDay" value="26">26</option>
+                                                                    <option name="birthDay" value="27">27</option>
+                                                                    <option name="birthDay" value="28">28</option>
+                                                                    <option name="birthDay" value="29">29</option>
+                                                                    <option name="birthDay" value="30">30</option>
+                                                                    <option name="birthDay" value="31">31</option>
+                                                            </select>
+
+                                                            <select class="no_top_margin"
+                                                                    tabindex="0"
+                                                                    name="birthYear"
+                                                                    aria-required="true"
+                                                                    aria-describedby="dobError"
+                                                                    style="width: 85px"
+                                                                    aria-label="The year of Date of Birth">
+                                                                <option name="birthYear" value="">Year</option>
+                                                                    <option name="birthYear" value="2016">2016</option>
+                                                                    <option name="birthYear" value="2015">2015</option>
+                                                                    <option name="birthYear" value="2014">2014</option>
+                                                                    <option name="birthYear" value="2013">2013</option>
+                                                                    <option name="birthYear" value="2012">2012</option>
+                                                                    <option name="birthYear" value="2011">2011</option>
+                                                                    <option name="birthYear" value="2010">2010</option>
+                                                                    <option name="birthYear" value="2009">2009</option>
+                                                                    <option name="birthYear" value="2008">2008</option>
+                                                                    <option name="birthYear" value="2007">2007</option>
+                                                                    <option name="birthYear" value="2006">2006</option>
+                                                                    <option name="birthYear" value="2005">2005</option>
+                                                                    <option name="birthYear" value="2004">2004</option>
+                                                                    <option name="birthYear" value="2003">2003</option>
+                                                                    <option name="birthYear" value="2002">2002</option>
+                                                                    <option name="birthYear" value="2001">2001</option>
+                                                                    <option name="birthYear" value="2000">2000</option>
+                                                                    <option name="birthYear" value="1999">1999</option>
+                                                                    <option name="birthYear" value="1998">1998</option>
+                                                                    <option name="birthYear" value="1997">1997</option>
+                                                                    <option name="birthYear" value="1996">1996</option>
+                                                                    <option name="birthYear" value="1995">1995</option>
+                                                                    <option name="birthYear" value="1994">1994</option>
+                                                                    <option name="birthYear" value="1993">1993</option>
+                                                                    <option name="birthYear" value="1992">1992</option>
+                                                                    <option name="birthYear" value="1991">1991</option>
+                                                                    <option name="birthYear" value="1990">1990</option>
+                                                                    <option name="birthYear" value="1989">1989</option>
+                                                                    <option name="birthYear" value="1988">1988</option>
+                                                                    <option name="birthYear" value="1987">1987</option>
+                                                                    <option name="birthYear" value="1986">1986</option>
+                                                                    <option name="birthYear" value="1985">1985</option>
+                                                                    <option name="birthYear" value="1984">1984</option>
+                                                                    <option name="birthYear" value="1983">1983</option>
+                                                                    <option name="birthYear" value="1982">1982</option>
+                                                                    <option name="birthYear" value="1981">1981</option>
+                                                                    <option name="birthYear" value="1980">1980</option>
+                                                                    <option name="birthYear" value="1979">1979</option>
+                                                                    <option name="birthYear" value="1978">1978</option>
+                                                                    <option name="birthYear" value="1977">1977</option>
+                                                                    <option name="birthYear" value="1976">1976</option>
+                                                                    <option name="birthYear" value="1975">1975</option>
+                                                                    <option name="birthYear" value="1974">1974</option>
+                                                                    <option name="birthYear" value="1973">1973</option>
+                                                                    <option name="birthYear" value="1972">1972</option>
+                                                                    <option name="birthYear" value="1971">1971</option>
+                                                                    <option name="birthYear" value="1970">1970</option>
+                                                                    <option name="birthYear" value="1969">1969</option>
+                                                                    <option name="birthYear" value="1968">1968</option>
+                                                                    <option name="birthYear" value="1967">1967</option>
+                                                                    <option name="birthYear" value="1966">1966</option>
+                                                                    <option name="birthYear" value="1965">1965</option>
+                                                                    <option name="birthYear" value="1964">1964</option>
+                                                                    <option name="birthYear" value="1963">1963</option>
+                                                                    <option name="birthYear" value="1962">1962</option>
+                                                                    <option name="birthYear" value="1961">1961</option>
+                                                                    <option name="birthYear" value="1960">1960</option>
+                                                                    <option name="birthYear" value="1959">1959</option>
+                                                                    <option name="birthYear" value="1958">1958</option>
+                                                                    <option name="birthYear" value="1957">1957</option>
+                                                                    <option name="birthYear" value="1956">1956</option>
+                                                                    <option name="birthYear" value="1955">1955</option>
+                                                                    <option name="birthYear" value="1954">1954</option>
+                                                                    <option name="birthYear" value="1953">1953</option>
+                                                                    <option name="birthYear" value="1952">1952</option>
+                                                                    <option name="birthYear" value="1951">1951</option>
+                                                                    <option name="birthYear" value="1950">1950</option>
+                                                                    <option name="birthYear" value="1949">1949</option>
+                                                                    <option name="birthYear" value="1948">1948</option>
+                                                                    <option name="birthYear" value="1947">1947</option>
+                                                                    <option name="birthYear" value="1946">1946</option>
+                                                                    <option name="birthYear" value="1945">1945</option>
+                                                                    <option name="birthYear" value="1944">1944</option>
+                                                                    <option name="birthYear" value="1943">1943</option>
+                                                                    <option name="birthYear" value="1942">1942</option>
+                                                                    <option name="birthYear" value="1941">1941</option>
+                                                                    <option name="birthYear" value="1940">1940</option>
+                                                                    <option name="birthYear" value="1939">1939</option>
+                                                                    <option name="birthYear" value="1938">1938</option>
+                                                                    <option name="birthYear" value="1937">1937</option>
+                                                                    <option name="birthYear" value="1936">1936</option>
+                                                                    <option name="birthYear" value="1935">1935</option>
+                                                                    <option name="birthYear" value="1934">1934</option>
+                                                                    <option name="birthYear" value="1933">1933</option>
+                                                                    <option name="birthYear" value="1932">1932</option>
+                                                                    <option name="birthYear" value="1931">1931</option>
+                                                                    <option name="birthYear" value="1930">1930</option>
+                                                                    <option name="birthYear" value="1929">1929</option>
+                                                                    <option name="birthYear" value="1928">1928</option>
+                                                                    <option name="birthYear" value="1927">1927</option>
+                                                                    <option name="birthYear" value="1926">1926</option>
+                                                                    <option name="birthYear" value="1925">1925</option>
+                                                                    <option name="birthYear" value="1924">1924</option>
+                                                                    <option name="birthYear" value="1923">1923</option>
+                                                                    <option name="birthYear" value="1922">1922</option>
+                                                                    <option name="birthYear" value="1921">1921</option>
+                                                                    <option name="birthYear" value="1920">1920</option>
+                                                                    <option name="birthYear" value="1919">1919</option>
+                                                                    <option name="birthYear" value="1918">1918</option>
+                                                                    <option name="birthYear" value="1917">1917</option>
+                                                                    <option name="birthYear" value="1916">1916</option>
+                                                                    <option name="birthYear" value="1915">1915</option>
+                                                                    <option name="birthYear" value="1914">1914</option>
+                                                                    <option name="birthYear" value="1913">1913</option>
+                                                                    <option name="birthYear" value="1912">1912</option>
+                                                                    <option name="birthYear" value="1911">1911</option>
+                                                                    <option name="birthYear" value="1910">1910</option>
+                                                                    <option name="birthYear" value="1909">1909</option>
+                                                                    <option name="birthYear" value="1908">1908</option>
+                                                                    <option name="birthYear" value="1907">1907</option>
+                                                                    <option name="birthYear" value="1906">1906</option>
+                                                                    <option name="birthYear" value="1905">1905</option>
+                                                                    <option name="birthYear" value="1904">1904</option>
+                                                                    <option name="birthYear" value="1903">1903</option>
+                                                                    <option name="birthYear" value="1902">1902</option>
+                                                                    <option name="birthYear" value="1901">1901</option>
+                                                                    <option name="birthYear" value="1900">1900</option>
+                                                            </select>
+
+                                                            <!--
+                          -->
+
+                                                            <div class="clear"></div>
+                                                        </td>
+                                                    </tr>
+
+
+                                                <tr class="dashed_top">
+                                                    <td class="width_35">
+                                                        <div class="clear"></div>
+                                                    </td>
+                                                    <td class="width_65">
+                                                        <input type="submit" value="Login" tabindex="0"
+                                                               class="vertical button_standard bg_blue input_submit inline offset-r10 login_btn">
+
+                                                        <div class="clear"></div>
+
+                                                    </td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                            <div class="clear">&nbsp;</div>
+                                        </div>
+
+
+                                        <div class="clear">&nbsp;</div>
+                                        <!--End main_content_container -->
+                                    </div>
+
+                                    <!--End main_content -->
+                                </div>
+                                <!-- End main_content_right_rail_unit --></div>
+                            <div class="clear"></div>
+                            <!-- End main_right_unit --></div>
+                        <div class='clear'>
+                        </div>
+                        </form>
+                        <!-- End main_container -->
+                    </div>
+
+                    <div class='clear'>
+                    </div>
+                    <!-- End main -->
+                </div>
+                <div class='clear'>
+                </div>
+                <!-- End content_container -->
+            </div>
+
+      <div id="footer" class="no-print">
+        <div id="footer_top_border">
+          <!-- End footer_top_border -->
+        </div>
+        <div id="footer_container">
+          <div class="article article_standard">
+            <p>
+              <span>
+                <a href="/doc/termsConditions" target="_blank" rel="noopener">Terms and Conditions</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/securityPolicy" target="_blank" rel="noopener">Security Policy</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/privacyPolicy" target="_blank" rel="noopener">Privacy Policy</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/contactUs" target="_blank" rel="noopener">Contact Us</a>
+              </span>
+            </p>
+            <p>
+<!--              <span class="copyright">-->
+<!--                  Copyright &copy; 2018-->
+<!--                  <a id="usb" href="http://www.cmcagile.com" target="cmcuscorp">Katabat US</a>-->
+<!--              </span>-->
+              <div class="right" aria-describedby="callUsOne">
+                <span id="callUsOne" class="table-row">Call Us: 1-302-830-9262</span>
+                <span id="callUsTwo" class="table-row right"></span>
+              </div>
+            </p>
+            <p></p>
+            <!-- End article -->
+          </div>
+          <div class="clear"></div>
+          <!-- End footer_container" -->
+        </div>
+        <div class="clear">
+        </div>
+        <!-- End footer -->
+      </div>
+
+            <div class='clear'>
+            </div>
+            <!-- End content -->
+        </div>
+        <!-- End page_center_container -->
+    </div>
+    <!-- End page_center -->
+</div>
+
+<script src="js/global_js/global_framework_1.js" type="text/javascript"
+        language="javascript"></script>
+<script language="javascript" type="text/javascript"
+        src="js/katabat_js/core/katabat_core_1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="js/loan_servicing_js/loan_servicing_1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="js/loan_servicing_js/jquery-ui.min-1.12.1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="/.theme/js/loan_servicing_js/datepicker-fr.js"></script>
+<script type="text/javascript" language="javascript" src="/.theme/scripts/screen-reader.min.js"></script>
+ <script type="text/javascript" language="javascript" src="/.theme/scripts/common.js"></script>
+ <script language="javascript" type="text/javascript"
+        src="js/select2.min.js"></script>
+  <script language="javascript" type="text/javascript"
+        src="js/iconfont.js"></script>
+
+
+<script type="application/javascript">
+    function isAlphaNumWithSpacesNDashes(evt) {
+        var hh = (evt.which) ? evt.which : event.keyCode
+        if ((hh == 45) || (hh == 32) || (hh > 47 && hh < 58) || (hh > 64 && hh < 91) || (hh > 96 && hh < 123) || (hh == 8) || (hh == 13)) {
+        }
+        else {
+            return false;
+        }
+        return true;
+    }
+
+    function convertToUpperCase(el) {
+        var valueToUpperCase = el.value;
+        el.value = valueToUpperCase.toUpperCase();
+    }
+
+    function isTdbIntegerKey(evt) {
+        if (evt.keyCode != 9) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+        }
+        return true;
+    }
+
+    function isAlphanumric (evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if ((charCode > 47 && charCode < 58) || (charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || (charCode == 8) || (charCode == 13)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    $(document).ready(function(){
+        let _url = window.location.href;
+        let invalid_attr = 'aria-invalid';
+        let describedby_attr = 'aria-describedby';
+        if(_url && _url.indexOf('error=true') > -1){
+            let error_field = $('#error');
+            if(error_field[0]){
+                let firstNameLabel = "First Name",
+                    lastNameLabel = "Last Name",
+                    last4ActNumLabel = "Last 4 digits of Account Number",
+                    dateOfBirthLabel = "Date of Birth";
+
+                error_field.attr('tabindex', 0);
+                let error_info = error_field.text();
+                if(error_info.indexOf(firstNameLabel) > -1){
+                    $("#firstName").attr(invalid_attr, true);
+                    $("#firstName").attr(describedby_attr, 'firstNameError');
+                } else {
+                    $("#firstName").attr(invalid_attr, false);
+                    $("#firstName").removeAttr(describedby_attr);
+                }
+
+                if(error_info.indexOf(lastNameLabel) > -1){
+                    $("#lastName").attr(invalid_attr, true);
+                    $("#lastName").attr(describedby_attr, 'lastNameError');
+                } else {
+                    $("#lastName").attr(invalid_attr, false);
+                    $("#lastName").removeAttr(describedby_attr);
+                }
+
+                if(error_info.indexOf(last4ActNumLabel) > -1){
+                    $("#last4ActNum").attr(invalid_attr, true);
+                    $("#last4ActNum").attr(describedby_attr, 'last4ActNumError');
+                } else {
+                    $("#last4ActNum").attr(invalid_attr, false);
+                    $("#last4ActNum").removeAttr(describedby_attr);
+                }
+
+                if(error_info.indexOf(dateOfBirthLabel) > -1){
+                    $("#last4ActNum").attr(describedby_attr, 'last4ActNumError');
+                } else {
+                    $("#last4ActNum").removeAttr(describedby_attr);
+                }
+            }
+        }
+
+
+    });
+
+</script>
+</body>
+</html>

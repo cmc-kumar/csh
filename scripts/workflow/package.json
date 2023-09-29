@@ -1,0 +1,16 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "workflow",
+  "scripts": {
+    "build": "npm run build:workflow-validate && npm run build:expand-collapse-tool",
+    "build:workflow-validate": "yuicompressor -v -o mini/workflow-validate.min.js workflow-validate.js",
+    "build:expand-collapse-tool": "yuicompressor -v -o mini/expand-collapse-tool.min.js expand-collapse-tool.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "yuicompressor": "yuicompressor -h"
+  },
+  "private": true,
+  "devDependencies": {
+    "yuicompressor": "^2.4.8"
+  }
+}

@@ -1,0 +1,1812 @@
+
+
+
+
+
+            
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="robots" content="index, follow"/>
+
+            <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+            <link rel="icon" type="image/ico" href="favicon.ico"/>
+            <link rel="apple-touch-icon" href="favicon.ico"/>
+            
+
+    <link href="css/global_css/global_framework_1.css" type="text/css" rel="stylesheet"/>
+    <link href="css/global_css/default_styles_1.css" type="text/css" rel="stylesheet"/>
+    <link href="css/katabat_css/core/katabat_core_1.css" type="text/css"
+          rel="stylesheet"/>
+    <link href="css/katabat_core_2_css/katabat_core_2.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="css/cmc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/client.css" rel="stylesheet" type="text/css"/>
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+     <link href="css/select2.min.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/jquery-3.5.1.js" type="text/javascript"></script>
+    <script>
+        var enter_label = "Enter",
+            enter_as_label = "Enter as a",
+            enter_as_currency = "Enter in currency format",
+            enter_as_text = "Enter as Text",
+            date_format_label_prefix = "Date Format",
+            required_label = "required",
+            selected_option_label= "Selected",
+            siteDateFormat_label = "Month Day , Year",
+            dropdown_count_label = "There are {0} items in the list",
+            dropdown_count_endOfList = "End of list",
+            page_title_screen_reader_suffix = "Last 4 digits of Account Number, 1164";
+
+    </script>
+    <style type="text/css">
+      .ui-datepicker .ui-datepicker-title {
+        margin: 0px 1.3em;
+        line-height: 1.8em;
+        text-align: center;
+      }
+    </style>
+  <link rel="stylesheet" href="css/common_style.css" type="text/css" title="" charset="utf-8"/>
+</head>
+<body class="responsive">
+
+            <div id="mobile_nav_flyout_left" class="small medium inactive">
+
+              <div id="mobile_nav_flyout_left_container">
+               <a href="javascript:mobile_menu('mobile_nav_flyout_left')" role="menuitem" class="vertical bg_blue button_menu_item">
+               <span class="h3 alignment_wide text-transform">
+               <img class="logo_mobile" role="img" alt="Mercury" src="images/logo/logo.png">
+               </span>
+                    <span class="fa-chevron-left text_white" aria-hidden="true"></span>
+                </a>
+
+                <!---->
+
+                  <div class="bg_off_white">
+
+                        <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large border-bottom-item inactive">
+                              <a title="Account Summary" role="menuitem" class="block horizontal active" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/html/acctSummary">
+                                  <span class="text-transform">Account Summary</span>
+                              </a>
+                        </h3>
+
+                        <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large inactive">
+                            <a title="Payment Options" aria-expanded="false" aria-haspopup="true" class="block horizontal inactive" href="javascript:void(0);" onclick="more(this)">
+                                <span class="plus_minus" aria-hidden="true"><span class="fa-plus" aria-hidden="true"></span></span>
+                                <span class="text-transform">Payment Options</span>
+                            </a>
+                        </h3>
+                        <div class="accordion_content" aria-hidden="true">
+                            <a title="Make A Payment" class="vertical bg_white button_menu_item " role="menuitem" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/payment">
+                                <span class="indent_1 alignment_wide">Make A Payment</span><span class="fa-chevron-right" aria-hidden="true"></span>
+                            </a>
+                            <a title="Review Payment Offers" class="vertical bg_white button_menu_item " role="menuitem" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/program">
+                                <span class="indent_1 alignment_wide">Review Payment Offers</span><span class="fa-chevron-right" aria-hidden="true"></span>
+                            </a>
+                            <a title="Manage Payment Methods" class="vertical bg_white button_menu_item " role="menuitem" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/payments/manageBankAccounts">
+                                <span class="indent_1 alignment_wide">Manage Payment Methods</span><span class="fa-chevron-right" aria-hidden="true"></span>
+                            </a>
+                              <a title="Promise To Pay" class="vertical bg_white button_menu_item " role="menuitem" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/promise">
+                                  <span class="indent_1 alignment_wide">Promise To Pay</span><span class="fa-chevron-right" aria-hidden="true"></span>
+                              </a>
+                        </div>
+
+                        <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large active">
+                            <a title="Update Contact Info" class="block horizontal active" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/flow/contactFlow">
+                                <span class="text-transform">Update Contact Info</span>
+                            </a>
+                        </h3>
+
+
+                        <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large active">
+                            <a title="Schedule Appointment" class="block horizontal active" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/appointment/list">
+                                <span class="text-transform">Schedule Appointment</span>
+                            </a>
+                        </h3>
+
+
+
+
+                    <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large active">
+                          <a title="Logout" role="menuitem" class="block horizontal active" href="#" onclick="checkLogoffWorkflow('mobile');">
+                              <span class="text-transform">Logout</span>
+                          </a>
+                    </h3>
+                  </div>
+
+              </div>
+             </div>
+
+             <div id="mobile_nav_flyout_right" class="small medium inactive">
+                <div id="mobile_nav_flyout_right_container">
+                </div>
+              </div>
+
+             <script type="text/javascript">
+             function changeMobDefaultLanguage(selectLanguage){
+             if(selectLanguage=='en_US'){
+             document.getElementById('English_icon').className='fa-check';
+             document.getElementById('French_icon').className='';
+             }else if(selectLanguage=='fr_FR'){
+             document.getElementById('English_icon').className='';
+             document.getElementById('French_icon').className='fa-check';
+             }
+               var languagePreference = selectLanguage
+                var currentUrl = window.location.href;
+                  if(currentUrl.indexOf('security') < 0 && currentUrl.indexOf("") > -1){
+                    $.get('/lang/changeLang', {'lang': languagePreference}, function(result){
+                        try{
+                          clearInterval(hashInterval);
+                        }catch(e){}
+                        currentUrl = currentUrl.split('#')[0] + '#' + languagePreference;
+                        window.location.href = currentUrl;
+
+                        setTimeout(function(){
+                          window.location.reload();
+                        },100);
+                   });
+                  } else {
+                    <!--var url = new URL(currentUrl);-->
+                    <!--url.searchParams.set("lang", languagePreference); // setting your param-->
+                    <!--var newUrl = url.href;-->
+                    <!--window.location.href=newUrl;-->
+                     var newUrl=currentUrl.split("?")[0]+"?lang="+languagePreference
+                     window.location.href=newUrl
+
+                  }
+                  }
+             </script>
+
+            
+
+<div id="page_center">
+  <div id="page_center_container">
+    <div id='content'>
+      <div id='content_container'>
+        <div id='header'>
+          <div id='header_container'>
+          
+           <div id="mobile_nav" class="small medium no-print">
+              <ul>
+                <li class="icon">
+                    <a class="menu_activator" id="mobile-main-menu-icon" a-open-text="Open Menu Button" a-close-text="Close Menu Button" aria-label="Open Menu Button" href="javascript:mobile_menu('mobile_nav_flyout_left')"><span
+                      class="fa-bars"></span></a>
+                </li>
+                <li>
+                    <span class="weight_bold welcome_info">
+Welcome<br>
+                        EASYPAY ROBINSON
+                    </span>
+                    <!--<span>-->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+               <!--</span>-->
+                </li>
+                <li class="icon">
+                  <a href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/html/acctSummary">
+                    <img class="logo" role="img" alt="Mercury" src="images/logo/logo.png">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="user_logout" class="large no-print">
+                <div id="user_logout_container">
+                  <p class="weight_bold">Welcome&nbsp;
+
+                          EASYPAY ROBINSON
+                    <span aria-hidden="true">&nbsp;|&nbsp;</span>
+                    <a href="#" onclick="checkLogoffWorkflow();">Logout</a>
+
+
+                  </p>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+             function changeDefaultLanguage(selectLanguage){
+                  if(selectLanguage == 'mobile') {
+                    console.log($( "#mobLanguagePreference option:selected" ).val());
+                    var languagePreference = $( "#mobLanguagePreference option:selected" ).val();
+                  }else {
+                    console.log($( "#languagePreference option:selected" ).val());
+                    var languagePreference = $( "#languagePreference option:selected" ).val();
+                  }
+
+                  var currentUrl = window.location.href;
+                  if(currentUrl.indexOf('security') < 0 && currentUrl.indexOf("ozEsYt") > -1){
+                    $.get('/lang/changeLang', {'lang': languagePreference}, function(result){
+                        try{
+                          clearInterval(hashInterval);
+                        }catch(e){}
+                        currentUrl = currentUrl.split('#')[0] + '#' + languagePreference;
+                        window.location.href = currentUrl;
+
+                        setTimeout(function(){
+                          window.location.reload();
+                        },100);
+                   });
+                  } else {
+                    <!--var url = new URL(currentUrl);-->
+                    <!--url.searchParams.set("lang", languagePreference); // setting your param-->
+                    <!--var newUrl = url.href;-->
+                    <!--window.location.href=newUrl;-->
+                     var newUrl=currentUrl.split("?")[0]+"?lang="+languagePreference
+                     window.location.href=newUrl
+
+                  }
+             }
+
+       function addOrUpdateUrlParam(name, value) {
+                   var href = window.location.href;
+          var regex = new RegExp("[&\\?]" + name + "=");
+          console.log("regex"+regex);
+          if(regex.test(href)) {
+          console.log("regex.test(href)"+regex.test(href));
+          regex = new RegExp("([&\\?])" + name + "=\\d+");
+          window.location.href = href.replace(regex, "$1" + name + "=" + value);
+          } else {
+          if(href.indexOf("?") > -1) {
+              window.location.href = href + "&" + name + "=" + value;
+          }else {
+              window.location.href = href.concat( "?").concat(name).concat( "=").concat(value);
+          }
+
+          console.log("window.location.href"+window.location.href);
+       }
+   }
+
+$(document).ready(function () {
+   var url=window.location.pathname;
+  if(url.indexOf("resWorkflow")==-1 && url.indexOf("bcWorkflow")==-1){
+  var dom='<a class="skip-hide" href="#" aria-hidden="true"></a><a class="skip-main" href="#main" onclick="location.href=\'#main\'" aria-hidden="true">Skip to main content</a>';
+   $("#header_container").before(dom)
+  }
+});
+</script>
+
+            <div class="clear"></div>
+          
+          
+            <div id="top_nav" class="large no-print">
+              <div id="top_nav_container">
+                <div class="multicolumn_row multicolumn_row_borderless">
+                  <div class="multicolumn_column top_logo_width">
+                    <div class="multicolumn_column_container">
+                      <a href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/html/acctSummary">
+                        <img role="img" alt="Mercury" src="images/logo/logo.png">
+                      </a>
+                      <div class="fit-logo" aria-hidden="true"></div>
+                      <div class="column_fill" aria-hidden="true">
+                      </div>
+                      <!-- End multicolumn_column_container -->
+                    </div>
+                    <!-- End multicolumn_column -->
+                  </div>
+                    <div class="multicolumn_column width_last top_nav_width" role="navigation">
+                      <div class="multicolumn_column_container">
+                        <ul id="top_nav_menu" class="">
+                            <li id="top_nav_menu_0">
+                              <a title="Account Summary" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/html/acctSummary" class="text-transform">Account Summary</a>
+                            </li>
+                             <li id="top_nav_menu_1" class="menu_button url_off not_full" expanded="false">
+                              <a title="Payment Options" role="menuitem"  class="menu_button_a text-transform" href="#" aria-haspopup="true" aria-expanded="false">Payment Options
+                               <svg class="td-icon expand" aria-hidden="true">
+                                 <use xlink:href="#icon-dropdown"></use>
+                               </svg>
+                               <svg class="td-icon collapse" aria-hidden="true">
+                                 <use xlink:href="#icon-ic-up"></use>
+                               </svg>
+                              </a>
+                              <div id="top_nav_targets_1" class="top_nav_target flyout" aria-hidden="true">
+                                <div class="article article_standard" role="menu">
+                                  <p><a role="menuitem" title="Make A Payment" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/payment">Make A Payment</a></p>
+                                  <p><a role="menuitem" title="Review Payment Offers" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/program">Review Payment Offers</a></p>
+                                  <p><a role="menuitem" title="Manage Payment Methods" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/payments/manageBankAccounts">Manage Payment Methods</a></p>
+                                    <p><a role="menuitem" title="Promise To Pay" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/promise">Promise To Pay</a></p>
+                                </div>
+                              </div>
+                            </li>
+                            <li id="top_nav_menu_2">
+                              <a title="Update Contact Info" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/flow/contactFlow" class="text-transform">Update Contact Info</a>
+                            </li>
+
+                            <li id="top_nav_menu_3">
+                              <a title="Schedule Appointment" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/appointment/list" class="text-transform">Schedule Appointment</a>
+                            </li>
+                        </ul>
+                        <div class="column_fill" aria-hidden="true">
+                        </div>
+                        <!-- End multicolumn_column_container -->
+                      </div>
+                      <!-- End multicolumn_column -->
+                    </div>
+                  <!-- End multicolumn_row -->
+                </div>
+              </div>
+            </div>
+            
+            <div class='clear'>
+            </div>
+            <!-- End header_container -->
+          </div>
+          <div class='clear'>
+          </div>
+          <!-- End header -->
+        </div>
+        <div id='main'>
+          <div id='main_container'>
+            <div id="main_top">
+              <div id="main_top_container">
+              
+      <form id="form" action="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/flow/appointmentFlow" method="POST" novalidate="novalidate">
+      <input type="hidden" id="_tk" name="_tk" value="gW8HX86sbUINkbcoqjTuhPiiu4zau039YCUNQbzn27E">
+      <input type="hidden" name="_X_SS_CSRFToken" value="88C111BC167CA185">
+      
+                <div class="clear">&nbsp;</div>
+                <!--End main_top_container -->
+              </div>
+              <div class="clear">&nbsp;</div>
+              <!--End main_top-->
+            </div>
+            <div id="main_right_unit">
+              <div id="main_content_right_rail_unit">
+                <div id="main_content" class="no_right_rail">
+                  <div id="main_content_container">
+                    <div id="title_main_content" class="page_title">
+                      <h1 class="text-transform">Schedule Advisor Appointment <span class="page-header-stuffix" aria-hidden="true">-1164</span></h1>
+                      <!-- End title_main_content -->
+                    </div>
+                    <div class="multicolumn_row multicolumn_row_standard">
+                      <div class="multicolumn_column width_100 width_last">
+                        <div class="multicolumn_column_container">
+                          <h2 class="h4 text_light">Please provide the following information and an advisor will contact you:</h2>
+                          <div class="column_fill"></div>
+                          <!-- End multicolumn_column_container -->
+                        </div>
+                        <!-- End multicolumn_column -->
+                      </div>
+                      <div class="clear"></div>
+                      <!-- ECM0000 -->
+                      <!-- End multicolumn_row --></div>
+                    <div class="multicolumn_row multicolumn_row_standard">
+                      <div class="multicolumn_column width_100">
+                        <div class="multicolumn_column_container">
+                          <div class="article article_standard">
+
+                            <input type="hidden" name="_flowExecutionKey" value="e9s1">
+                            <label for="appointmentDate" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "appointmentDate_error"}'>Appointment Date:<span class="fa-asterisk text_red bg_callout_padding"></span></label>
+
+                            <p class="no_top_margin text_red" id="appointmentDate_error"></p>
+                            <p><span class="date-row"><input type="text" id="appointmentDate" name="appointmentDate" value="" autocomplete="off"
+                                    formField="true"
+                                    required="true"
+                                    fieldType="date"
+                                    readonly="readonly"
+                                    dateFormat="MM/dd/yyyy"
+                                    availableDays="09/29/2023;09/30/2023;10/01/2023;10/02/2023;10/03/2023;10/04/2023;10/05/2023;10/06/2023;10/07/2023;10/08/2023;10/09/2023;10/10/2023;10/11/2023;10/12/2023;10/13/2023;10/14/2023;10/15/2023;10/16/2023;10/17/2023;10/18/2023;10/19/2023;10/20/2023;10/21/2023;10/22/2023;10/23/2023;10/24/2023;10/25/2023;10/26/2023;10/27/2023;10/28/2023"
+                                    maxValue="+30d"
+                                    minValue="1"
+                                    style="display: inline;width:7em; font-size: 1em;"
+                                    maxlength="10"
+                                    onchange="onApptDateChanged()"/></span></p>
+                            <div class="clear"></div>
+
+                            <label for="appointmentTimeZone" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "appointmentTimeZone_error"}'>Appointment Time Zone:</label>
+                            <div class="clear"></div>
+
+                            <p class="no_top_margin text_red" id="appointmentTimeZone_error"></p>
+                             
+         <select  id="appointmentTimeZone" name="appointmentTimeZone" onchange="onApptTimeZoneChanged()">
+           <option value="America/Denver">Mountain Standard Time</option>
+           <option value="America/Anchorage">Alaskan Standard Time</option>
+           <option value="America/Los_Angeles">Pacific Standard Time</option>
+           <option value="America/New_York">Eastern Standard Time</option>
+           <option value="America/Chicago">Central Standard Time</option>
+           <option value="Pacific/Honolulu">Hawaii-Aleutian Standard Time</option>
+         </select>
+        
+                            <div class="clear"></div>
+                            <p></p>
+                              
+                            <label for="appointmentTime" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "appointmentTime_error"}'>Appointment Time:<span class="fa-asterisk text_red bg_callout_padding"></span></label>
+                            <div class="clear"></div>
+
+                            <p class="no_top_margin text_red" id="appointmentTime_error"></p>
+                              
+         <select  id="appointmentTime" name="appointmentTime" disabled>
+         </select>
+        
+                            <div class="clear"></div>
+                            <p></p>
+
+                            <label for="callMe" id="callMe_label">Call me at:<span class="fa-asterisk text_red bg_callout_padding"></span></label>
+
+                            <p class="no_top_margin text_red"></p>
+                          <input type="hidden" name="contactPhone" value=""/>
+
+                            <div role="group" aria-labelledby="callMe_label">
+                              <input type="hidden" id="byHomePhone" name="byHomePhone" value="false"/>
+                                <input type="checkbox" id="byHomePhoneBox" name="byHomePhoneBox" 
+                                       onclick="changeHomePhoneStatus()" class="inline">
+                                <label for="byHomePhoneBox" class="inline">&nbsp;&nbsp;Home Phone:&nbsp;
+        
+         <span style="font-weight: bold;">8327777777</span></label>
+                                <div class="clear"></div>
+
+                              <input type="hidden" id="byWorkPhone" name="byWorkPhone" value="false"/>
+
+                              <input type="hidden" id="byMobilePhone" name="byMobilePhone" value="false"/>
+                                <input type="checkbox" id="byMobilePhoneBox" name="byMobilePhoneBox" 
+                                       onclick="changeMobilePhoneStatus()" class="inline">
+                                <label for="byMobilePhoneBox" class="inline">&nbsp;&nbsp;Mobile Phone:&nbsp;
+        
+         <span style="font-weight: bold;">8327777778</span></label>
+                                <div class="clear"></div>
+
+                          <input type="hidden" id="byOtherPhone" name="byOtherPhone" value="false"/>
+                            
+                          <input type="hidden" id="byAppointmentPhone" name="byAppointmentPhone" value="false"/>
+                            <input type="checkbox" id="byAppointmentPhoneBox" name="byAppointmentPhoneBox" 
+                                   onclick="changeApptPhoneStatus(false)" class="inline">
+                            <label for="byAppointmentPhoneBox" class="inline" id="byAppointmentPhoneBox_label">&nbsp;&nbsp;Appointment Phone:</label>
+
+                              <label for="appointmentPhoneNum" class="hide accessibility-input-by-label" item-meta='{"required": "true", "labelledby": "byAppointmentPhoneBox_label", "describedby": "apptPhoneNumber_error"}'>Appointment Phone:</label>
+                              <p class="no_top_margin text_red" id="apptPhoneNumber_error"></p>
+                              
+        
+          <input type="hidden" id="appointmentPhoneCountryCodeHidden" name="countryCode" value=""/>
+        
+                              
+        
+        
+                              
+      <input type="text" id="appointmentPhoneNum" name="appointmentPhoneNum" value="" autocomplete="off" class="dd_input_tel"/>
+      
+
+                            </div>
+
+                            <div class="clear"></div>
+                        <div id="language_show_hide">
+                         <label for="language1" class="accessibility-input-by-label">Language:</label>
+                         <div class="clear"></div>
+                          
+         <select  id="language1" name="language1" class="required">
+                    <option selected="selected" value=""></option>
+         </select>
+        
+                            
+        
+          <input type="hidden" id="languageHidden" name="language" value=""/>
+        
+                            <div class="clear"></div>
+                        </div>
+                            <label for="comments" class="accessibility-input-by-label">Reasons for Call:</label>
+                          <textarea  id="comments" name="comments" class="dd_input_tel" rows="5"></textarea>
+                            <div class="clear"></div>
+                            <p>
+                              <input type="submit" name="_eventId_confirm" id="confirmBtn" value="Continue" class="vertical button_standard bg_blue input_submit inline offset-r10 btn btn-primary"/>
+                              <input type="submit" name="_eventId_cancel" value="Cancel" class="vertical button_standard bg_blue input_submit inline btn btn-default"/>
+                            </p>
+                          </div>
+                          <div class="column_fill"></div>
+                          <!-- End multicolumn_column_container --></div>
+                        <!-- End multicolumn_column --></div>
+                      <div class="clear"></div>
+                      <!-- ECM0000 -->
+                      <!-- End multicolumn_row -->
+                    </div>
+                  </form>
+                    <div class="clear">&nbsp;</div>
+                    <!--End main_content_container --></div>
+                  <div class="clear">&nbsp;</div>
+                  <!--End main_content --></div>
+                <!-- End main_content_right_rail_unit -->
+              </div>
+              <div class="clear"></div>
+              <!-- End main_right_unit -->
+            </div>
+
+            <!-- End main_container -->
+          </div>
+          <div class='clear'></div>
+          <!-- End main -->
+        </div>
+        <div class='clear'></div>
+        <!-- End content_container -->
+      </div>
+    
+      <div id="footer" class="no-print">
+        <div id="footer_top_border">
+          <!-- End footer_top_border -->
+        </div>
+        <div id="footer_container">
+          <div class="article article_standard">
+            <p>
+              <span>
+                <a href="/doc/termsConditions" target="_blank" rel="noopener">Terms and Conditions</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/securityPolicy" target="_blank" rel="noopener">Security Policy</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/privacyPolicy" target="_blank" rel="noopener">Privacy Policy</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/contactUs" target="_blank" rel="noopener">Contact Us</a>
+              </span>
+            </p>
+            <p>
+<!--              <span class="copyright">-->
+<!--                  Copyright &copy; 2018-->
+<!--                  <a id="usb" href="http://www.cmcagile.com" target="cmcuscorp">Mercury</a>-->
+<!--              </span>-->
+              <div class="right" aria-describedby="callUsOne">
+                <span id="callUsOne" class="table-row">Call Us: 1-302-830-9262</span>
+                <span id="callUsTwo" class="table-row right"></span>
+              </div>
+            </p>
+            <p></p>
+            <!-- End article -->
+          </div>
+          <div class="clear"></div>
+          <!-- End footer_container" -->
+        </div>
+        <div class="clear">
+        </div>
+        <!-- End footer -->
+      </div>
+            
+      <div class='clear'>
+      </div>
+      <!-- End content -->
+    </div>
+    <!-- End page_center_container -->
+  </div>
+  <!-- End page_center -->
+</div>
+
+       <style>
+                .highlight{
+                    font-weight: bold;
+                    color: blue;
+                }
+                .no-close .ui-dialog-titlebar-close {
+                  display: none;
+                }
+                .no-title-bar .ui-dialog-titlebar {
+                    display: none;
+                }
+                .center-alignment{
+                    text-align: center;
+                }
+       </style>
+
+<div id="popupWinModel" class="modal large" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                onclick="cancelPopupWin()"></button>
+        <h4>&nbsp;</h4>
+    </div>
+    <div class="modal-body" style="height: 600px;">
+        <iframe id="popupWinFrame" name="popupWinFrame" style="width:800px;height:600px;"></iframe>
+    </div>
+</div>
+            
+<div id="_defaultDialog" class="modal" tabindex="-1" role="dialog"
+     aria-labelledby="dialog" aria-hidden="true">
+    <div class="modal-header">
+        <button name="close" type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 name="title">{title}</h4>
+    </div>
+    <div class="modal-body" name="body">
+        {body}
+    </div>
+</div>
+
+<div class="modal-backdrop fade"></div>
+<div id="timeoutCutDownWin" class="modal" tabindex="-1" role="dialog" aria-modal="true" item-focus="timeoutCutDownWin_keep_session_btn">
+    <div class="modal-header">
+        <h3>Session Timeout</h3>
+    </div>
+    <div class="modal-body">
+        <p>Due to lack of activity, this session will be logged out in 2 minutes.
+            <br>
+        </p>
+
+        <div class="highlight text-center">
+            <span class="color-error" id="sessionTimeoutLeftSeconds">120</span> second(s) left ...
+        </div>
+        <br>
+
+        <div class="text-center">
+            <button id="timeoutCutDownWin_keep_session_btn"  class="btn-blue btn-minwidth" onclick="activeSession();">Keep Session Active</button>
+        </div>
+        <p></p>
+    </div>
+</div>
+
+<div id="logoutWin" title="We'd welcome your feedback!" style="display:none" role="dialog" aria-modal="true" item-focus="btn_1_logout_btn">
+    <p><span class="screen-reader-text">We'd welcome your feedback!. </span>Thank you for visiting our website. You have been selected to participate in a brief customer satisfaction survey to let us know how we can improve your experience.</p>
+    <div class="highlight">
+        <p>The Survey is designed to measure your website experience you have had today and will only take a few minutes of your time.</p>
+    </div>
+    <br/>
+    <div class="center-alignment">
+        <button id="btn_1_logout_btn" class="button_standard bg_blue" onclick="window.location.href = '/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/tryLogoutPage';">Yes,I'll give feedback</button>
+        <button class="button_standard bg_blue" onclick="window.location.href = '/security/logout'">No,thanks</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function showModalMask(modalDivId) {
+        jQuery(".modal-backdrop").show();
+    }
+
+    function openSessionTimeOutWin(modalDivId, width, height) {
+      var options = {
+        dialogClass: "no-close no-title-bar"
+      };
+
+      if(width){
+        options['width'] = width;
+      }
+      if(height) {
+        options['height'] = height;
+      }
+
+      openDialog(modalDivId, options);
+    }
+
+    function openDialog(modalDivId, options, platform) {
+        var _modal = $("#" + modalDivId),
+            _auto_focus_target_id = _modal.attr('item-focus'),
+            _auto_focus_field = _auto_focus_target_id? $('#'+_auto_focus_target_id) : null;
+
+        var opts = {
+                dialogClass: "no-close",
+                modal: true,
+                width: (platform && 'mobile' == platform)? '99%': 450,
+                height: 320,
+                open: function(){
+                  if(_auto_focus_field && _auto_focus_field.length > 0){
+                      _auto_focus_field.focus();
+                  }
+                }
+        };
+
+        if(options){
+          opts = $.extend(opts, options);
+        }
+
+        _modal.dialog(opts);
+    }
+
+    function closeSessionTimeOutWin(modalDivId) {
+      $("#" + modalDivId).dialog('close');
+    }
+
+    var sessionCutDownTimes = 120;
+
+    var timeOutId = null;
+    function cutDownSessionTimeout() {
+        clearTimeout(timeOutId);
+        if (sessionCutDownTimes == 0) {
+            window.location.href="/security/logout";
+        } else {
+            sessionCutDownTimes--;
+            jQuery("#sessionTimeoutLeftSeconds").html(sessionCutDownTimes);
+            timeOutId = setTimeout(cutDownSessionTimeout, 1000);
+        }
+    }
+
+    function activeSession() {
+        jQuery.ajax({
+            url: "/ping",
+            success: function (data, textStatus, xhr) {
+                var sessionTimeoutFlag = xhr.getResponseHeader("SessionTimeout")
+                if ("Y" == sessionTimeoutFlag)
+                    window.location.href="/security/login";
+                else{
+                    closeSessionTimeOutWin("timeoutCutDownWin");
+                    clearTimeout(timeOutId);
+                    $("#languagePreference").focus();
+                    $("#mobLanguagePreference").focus();
+
+
+                }
+            }
+        });
+    }
+
+    function sessionTimeoutWarning() {
+        openSessionTimeOutWin("timeoutCutDownWin", 400, 250);
+        timeOutId = setTimeout(cutDownSessionTimeout, 1000);
+    }
+    
+    function openPopupWin(uri){
+        if(uri){
+            window.frames["popupWinFrame"].location.href = uri;
+            openSessionTimeOutWin("popupWinModel", 800, 600);
+        }
+    }
+    
+    function cancelPopupWin(){
+        closeSessionTimeOutWin("popupWinModel");
+        return false;
+    }
+    
+    function checkLogoffWorkflow(platform){
+      if(platform && 'mobile' == platform){
+        // collapse the menu
+        mobile_menu('mobile_nav_flyout_left');
+      }
+      jQuery.ajax({
+        async:true,
+        url:"/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/workflow/checkLogoffWorkflow?ozEsYt=3M5H4gVElY9P1R29DuX4Dg%3D%3D",
+        cache:false,
+        type:"POST",
+        success:function (data) {
+          if(data && "true" == data){
+            openDialog('logoutWin', null, platform);
+          }else{
+            window.location = "/security/logout";
+          }
+        }
+      });
+      return false;
+    }
+
+    jQuery(document).ready(function () {
+        var sessionTimeOutDiv = $('div[id=timeoutCutDownWin]');
+        if(sessionTimeOutDiv.length > 1){
+            $(sessionTimeOutDiv[0]).remove();
+        }
+
+        setTimeout(sessionTimeoutWarning, 1080*1000);
+    });
+</script>
+            
+
+<script src="js/global_js/global_framework_1.js" type="text/javascript"
+        language="javascript"></script>
+<script language="javascript" type="text/javascript"
+        src="js/katabat_js/core/katabat_core_1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="js/loan_servicing_js/loan_servicing_1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="js/loan_servicing_js/jquery-ui.min-1.12.1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="/.theme/js/loan_servicing_js/datepicker-fr.js"></script>
+<script type="text/javascript" language="javascript" src="/.theme/scripts/screen-reader.min.js"></script>
+ <script type="text/javascript" language="javascript" src="/.theme/scripts/common.js"></script>
+ <script language="javascript" type="text/javascript"
+        src="js/select2.min.js"></script>
+  <script language="javascript" type="text/javascript"
+        src="js/iconfont.js"></script>
+
+            
+
+
+
+<script type="text/javascript">
+
+    var date_months = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+    var date_days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    var _form_validation = {
+        errorDisplayPrefix: "form_error_",
+        attr: {
+            errorPrefix: 'error_',
+            required: 'required',
+            fieldType: 'fieldtype',
+            fieldName: 'fieldname',
+            maxValue: 'maxvalue',
+            minValue: 'minvalue',
+            dateFormat: 'dateformat',
+            regExpr: 'regexpr'
+        },
+        availableFieldType: {
+            numeric: 'numeric',
+            date: 'date',
+            radio: 'radio'
+        },
+        fieldTypeReg: {
+            numeric: /^\d+(\.\d+)?$/
+        }
+    };
+
+    var defaultRegional = "en";
+    if( ( typeof languagePreference != "undefined" ) && (languagePreference.value == "fr_FR")) {
+        defaultRegional = "fr";
+    }
+
+    function jquery_ui_datepicker_accessibility_fixed(ins){
+        $('#ui-datepicker-div').attr('role', 'application');
+        $('td.ui-state-disabled').attr('aria-hidden', true);
+        $('.ui-datepicker-month > option').map(function(){
+            var _field = $(this),
+                _val = parseInt(_field.val());
+            _field.attr('aria-label', date_months[_val])
+        });
+
+        $('.ui-datepicker-calendar  a').map(function(){
+            var _field = $(this),
+                _td = _field.parent(),
+                _data_year = _td.attr('data-year'),
+                _data_month = _td.attr('data-month'),
+                _data_day = _field.text(),
+                _cell_index = _td.index(),
+                _day_of_week = date_days[_cell_index];
+
+            var message = _day_of_week + ', ' + date_months[_data_month] + ' ' + _data_day + ', ' + _data_year;
+            // _td.attr('aria-label', message);
+            _field.attr('role', 'button');
+            _field.attr('aria-label', message);
+        });
+
+        var _day_of_today = new Date().getDate();
+        var _focus_selected_field = $('.ui-datepicker-current-day a')[0];
+        var focus_field = _focus_selected_field? _focus_selected_field: $('.ui-datepicker-calendar a:contains('+_day_of_today+')');
+
+        // assertive
+        $(focus_field).parent().attr('aria-live', 'polite')
+            .attr('aria-atomic', true)
+            .attr('id', 'ui-datepicker-0-selected')
+            .attr('aria-selected', true);
+        $(focus_field).closest('table').attr('aria-activedescendant', 'ui-datepicker-0-selected')
+                                       .attr('aria-readonly', true);
+        // $(ins.input).attr('aria-owns', $(focus_field).closest('table').parent().attr('id'));
+    }
+
+    function initDateFields() {
+//        console.log('initDateFields');
+        var dateFields = jQuery("input[" + _form_validation.attr.fieldType + "='"
+                                + _form_validation.availableFieldType.date + "']");
+        for (var i = 0; i < dateFields.length; i++) {
+            var field = jQuery(dateFields[i]);
+            var availableDays = field.attr("availableDays") ?
+                                field.attr("availableDays").split(";") : null;
+            var dateFormat = field.attr('dateformat');
+            var dateTrigger = field.attr('dateTrigger');
+            if (!dateTrigger){
+               dateTrigger = 'button'
+            }
+//            console.log('dateFormat', dateFormat);
+            if (dateFormat) {
+//                console.log('dateFormat 2', dateFormat);
+                dateFormat = dateFormat.replace("yyyy", 'yy');
+                dateFormat = dateFormat.replace("MM", 'mm');
+                field.attr('dateformat', dateFormat);
+            }
+
+            var config = {
+                dateFormat: dateFormat || "yy-mm-dd",
+                maxDate:    field.attr("maxvalue") || null,
+                minDate:    field.attr("minvalue") || null,
+                yearRange:  field.attr("yearRange") || "c-10:c+10",
+                buttonImage: 'images/cal-icon32.png',
+                buttonImageOnly: false,
+                autoSize: true,
+                showOn: dateTrigger,
+                onGenerate: function (ct) {
+                  jQuery(this).find('.xdsoft_date').toggleClass('xdsoft_disabled');
+                },
+                buttonText : field.attr("buttonText") || 'Calendar, Click or press the Enter key to open the calendar',
+                showButtonPanel: true,
+                changeYear: true,
+                changeMonth: true,
+                regional: field.attr("regional") || defaultRegional,
+                beforeShowDay: function (date) {
+                    if (!availableDays) {
+                        return [true, ""];
+                    }
+
+                    var dmy = jQuery.datepicker.formatDate(dateFormat, date);
+                    if (jQuery.inArray(dmy, availableDays) != -1) {
+                        return [true, ""];
+                    } else {
+                        return [false, ""];
+                    }
+                },
+                beforeShow: function (input, ins) {
+                    setTimeout(function () {
+                        jquery_ui_datepicker_accessibility_fixed(ins);
+                    } ,0);
+
+                    setTimeout(function () {
+                     jQuery('button.ui-datepicker-current').css('opacity',1).css('font-weight','bold');
+
+                     var _day_of_today = new Date().getDate();
+                     var _focus_selected_field = $('.ui-datepicker-current-day a')[0];
+                     var focus_field = _focus_selected_field? $(_focus_selected_field): $('.ui-datepicker-calendar a:contains('+_day_of_today+')');
+                     if(focus_field && focus_field.length > 0){
+                         if(config.showOn == 'focus'){
+                             setTimeout(function () {
+                                 $(focus_field).focus();
+                             }, 100);
+                         } else {
+                             setTimeout(function () {
+                                 focus_field.focus();
+                             }, 100);
+                         }
+                     } else {
+                         // not find the focus field
+                         // by default will focus the first of the enabled day
+                         setTimeout(function () {
+                             focus_field = $($('.ui-datepicker-calendar tbody tr td[data-handler=selectDay] a')[0]);
+                             focus_field.focus();
+                         }, 100);
+                     }
+
+                     let  _isSafari = navigator.userAgent.indexOf('Safari') > -1;
+                     let  _isChrome = navigator.userAgent.indexOf('Chrome') > -1;
+                     var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(navigator.userAgent);
+
+                     if (_isSafari && !_isChrome) {
+                         if(!isMobileDevice){
+                             setTimeout(function () {
+                                 $("select.ui-datepicker-month,select.ui-datepicker-year").select2({
+                                     minimumResultsForSearch: Infinity
+                                 });
+                             }, 1);
+                         }
+
+                       goToNextWithTabOnSafari();
+
+                       setTimeout(function () {
+                         let _datepicker_year = jQuery('.ui-datepicker-title').children()[3];
+                         let _datepicker_month = jQuery('.ui-datepicker-title').children()[1];
+                         if(isMobileDevice){
+                             _datepicker_year = $('div.ui-datepicker-title .ui-datepicker-year');
+                             _datepicker_month = $('div.ui-datepicker-title .ui-datepicker-month');
+                         }
+                         $(_datepicker_year).keydown(function(e) {
+                           if (e.keyCode == 9) {
+                             if (e.shiftKey && e.altKey) {
+                               setTimeout(function () {
+                                 if ($(_datepicker_year).is(":focus")) {
+                                   jQuery(_datepicker_month).focus();
+                                 }
+                               }, 1);
+                             } else {
+                               let focus_field_new = $('.ui-datepicker-calendar  a')[0];
+                               setTimeout(function () {
+                                 if ($(focus_field_new) && $(focus_field_new).size() > 0) {
+                                   $(focus_field_new).focus();
+                                 } else {
+                                   jQuery('button.ui-datepicker-current').focus();
+                                 }
+                               }, 1);
+                             }
+                           }
+                         });
+                       }, 30)
+                     }
+                     // jQuery('.ui-datepicker-month').focus();
+                     jQuery('button.ui-datepicker-close').keydown(function() {
+                       if (event.keyCode == 9) {
+                         ins.input.focus();
+                         jQuery('#ui-datepicker-div').css('display', 'none');
+                       }
+                     });
+
+                     $('#ui-datepicker-div').keydown(function() {
+                       if (event.keyCode == 27) {
+                         ins.input.focus();
+                         jQuery('#ui-datepicker-div').css('display', 'none');
+                       }
+                     });
+                    }, 1);
+
+                    $(input).keydown(function () {
+                      if (event.keyCode == 9 && event.shiftKey && event.altKey) {
+                        setTimeout(function () {
+                          jQuery.datepicker._hideDatepicker(input);
+                          goToPre(ins);
+                          }, 1);
+                      }
+                    });
+                },
+              onClose: function(date, instance) {
+                instance.input.blur();
+                goToNext(instance);
+              },
+              onChangeMonthYear: function (year, month, instance) {
+                  setTimeout(function(){
+                      jquery_ui_datepicker_accessibility_fixed(instance);
+                  }, 0);
+                let  _isSafari = navigator.userAgent.indexOf('Safari') > -1;
+                let  _isChrome = navigator.userAgent.indexOf('Chrome') > -1;
+                var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(navigator.userAgent);
+
+                if (jQuery('.ui-datepicker-month').is(":focus") || jQuery('.ui-datepicker-year').is(":focus") ) {
+                  setTimeout(function () {
+                    jQuery('button.ui-datepicker-current').css('opacity', 1).css('font-weight', 'bold');
+                    jQuery('.ui-datepicker-month').focus();
+                  }, 1);
+                } else if (_isSafari && !_isChrome)  {
+                  setTimeout(function () {
+                    if(!isMobileDevice){
+                      $("select.ui-datepicker-month,select.ui-datepicker-year").select2({
+                          minimumResultsForSearch: Infinity
+                      });
+                    }
+
+                    goToNextWithTabOnSafari();
+
+                    let focus_field_new = $('.ui-datepicker-calendar  a')[0];
+
+                    if ($(focus_field_new) && $(focus_field_new).size() > 0) {
+                      $(focus_field_new).focus();
+                    } else {
+                      jQuery('button.ui-datepicker-current').focus();
+                    }
+                  }, 10);
+                } else {
+                  instance.input.focus();
+                  instance.input.blur();
+                  goToNext(instance);
+                }
+              }
+//              ,
+//                onChangeMonthYear: function (year, month, instance) {
+//                    setTimeout(function () {
+//                        var buttonPane = jQuery(instance)
+//                                .datepicker("widget")
+//                                .find(".ui-datepicker-buttonpane");
+//
+//                        jQuery("<button>", {
+//                            text: "Clear",
+//                            click: function () {
+//                                //Code to clear your date field (text box, read only field etc.) I had to remove the line below and add custom code here
+//                                jQuery.datepicker._clearDate(instance.input);
+//                            }
+//                        }).appendTo(buttonPane).addClass("ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all");
+//                    }, 1);
+//                }
+            };
+            $.datepicker.regional[ config.regional ].dateFormat=dateFormat;
+            field.datepicker(config);
+            field.datepicker( "option",$.datepicker.regional[ config.regional ] );
+        }
+        /**
+         * override datepicker _gotoToday function
+         */
+        if(dateFields.length > 0 && jQuery.datepicker) {
+          var original_gotoToday = jQuery.datepicker._gotoToday;
+          jQuery.datepicker._gotoToday = function (id) {
+            var target = jQuery(id), inst = this._getInst(target[0]);
+            original_gotoToday.call(this, id);
+            this._selectDate(id, this._formatDate(inst, inst.selectedDay, inst.drawMonth, inst.drawYear));
+            inst.input.blur();
+            goToNext(inst);
+          }
+        }
+    }
+
+    function goToNext(instance) {
+        var inputs = $('#main_container :input[type!=hidden]'),isFind=false;
+        inputs.each(function(index,element){
+            var _field = $(this),
+                _dateTrigger = _field.attr('dateTrigger'),
+                nexEl = undefined;
+
+            if ($(this).attr("id") == instance.id) {
+                nexEl = _dateTrigger && _dateTrigger !== 'button' ? inputs[index +1]: inputs[index +2];
+                isFind = true;
+            }
+
+            if (isFind && nexEl) {
+                nexEl.focus();
+                isFind = false;
+            }
+        });
+
+        if (navigator.userAgent.indexOf("Trident") != -1) {
+            jQuery('#ui-datepicker-div').css('display', 'none');
+        }
+    }
+
+    function goToPre(instance) {
+      var inputs = $('#main_container :input'),isFind=false, canToTop=true, canS=false;
+      let l = 1;
+      inputs.each(function(index,element){
+        if (isFind) {
+          l = l + 2;
+        }
+        var nexEl = inputs[index-l];
+
+        if ($(this).attr("id") == instance.id) {
+          isFind = true;
+          canS = true;
+        }
+
+        if (isFind && ($(nexEl).attr('type') != 'hidden')) {
+          setTimeout(function () {
+            $(nexEl).focus();
+          }, 150);
+
+          isFind = false;
+          l =1;
+        }
+
+        if (canS && $(nexEl).attr('type') != 'hidden') {
+          canToTop = false;
+        }
+      });
+
+      if (canToTop) {
+        let allLi = $('#top_nav_container li');
+
+        $(allLi[allLi.size()-1]).children()[0].focus();
+      }
+    }
+
+    function goToNextWithTabOnSafari() {
+      $('.ui-datepicker-calendar a').map(function(ind){
+        let _focus_field = $(this);
+        _focus_field.keydown(function () {
+          if (event.keyCode == 9) {
+            let index = (event.shiftKey && event.altKey) ? ind - 1 : ind + 1;
+            let focus_field_new = $('.ui-datepicker-calendar  a')[index];
+            if ($(focus_field_new) && $(focus_field_new).size() > 0) {
+              setTimeout(function () {
+                $(focus_field_new).focus();
+              }, 1);
+            } else {
+              if (event.shiftKey && event.altKey) {
+                setTimeout(function () {
+                  jQuery('.ui-datepicker-year').focus();
+                }, 1);
+              } else {
+                setTimeout(function () {
+                  jQuery('button.ui-datepicker-current').focus();
+                }, 1);
+              }
+            }
+          }
+        });
+      });
+    }
+
+    function validateForm(formId) {
+        if (!formId) {
+            throw "The param 'formId' is required.";
+        }
+        try {
+
+            var errorCount = 0;
+
+            var validateFormFields = function (formFields) {
+                for (var i = 0; i < formFields.length; i++) {
+                    var formField = jQuery(formFields[i]);
+                    errorCount += validateField(formField).length;
+                }
+            }
+
+            var inputFields = jQuery("#" + formId + " input[formField=true][type!='radio']");
+            validateFormFields(inputFields);
+            var textareaFields = jQuery("#" + formId + " textarea[formField=true]");
+            validateFormFields(textareaFields);
+            var selectFields = jQuery("#" + formId + " select[formField=true]");
+            validateFormFields(selectFields);
+            var radioFields = jQuery("#" + formId + " input[formField=true][type='radio']:checked");
+            validateFormFields(radioFields);
+
+            return errorCount <= 0;
+        } catch (e) {
+            console.log(e);
+        }
+        return false;
+    }
+
+    function printFieldErrors(formField, errors) {
+        var name = formField.attr("name") || formField.attr(_form_validation.attr.fieldName);
+        name = name.replace(".", "_");
+        var errorDisplay = jQuery("#" + _form_validation.errorDisplayPrefix + name);
+        if (errorDisplay) {
+            var html = "";
+            if (errors && errors.length > 0) {
+                for (var i = 0; i < errors.length; i++) {
+                    html += (( i != 0 ? "<br/>*&nbsp;&nbsp;&nbsp;&nbsp;" : "*&nbsp;&nbsp;&nbsp;&nbsp;") + errors[i]);
+                }
+            }
+            jQuery(errorDisplay).html(html);
+        }
+    }
+
+    function validateField(formField) {
+        var messageField = jQuery("#_form_error_msg");
+        var fieldName = formField.attr("name");
+        var fieldNamePrefix = fieldName + "_";
+        var errors = [];
+        var fieldType = formField.attr(_form_validation.attr.fieldType);
+        var val = formField.val();
+        var field = formField;
+
+        if (fieldType == _form_validation.availableFieldType.radio) {
+            var f = jQuery("input[name='" + formField.attr(_form_validation.attr.fieldName) + "']:checked");
+            if (f && f.length == 1) {
+                val = f.val();
+                field = f;
+            } else {
+                val = null;
+            }
+        }
+
+        var checkField = function () {
+            if (fieldType == _form_validation.availableFieldType.numeric) {
+                // test data type
+                var fieldTypeMatched = _form_validation.fieldTypeReg.numeric.test(val);
+                if (!fieldTypeMatched) {
+                    errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.fieldType) || "Data type is mismatched.");
+                } else {
+                    // check max & min value
+                    var maxValue = formField.attr(_form_validation.attr.maxValue);
+                    var minValue = formField.attr(_form_validation.attr.minValue);
+                    if (maxValue && (parseFloat(val) > parseFloat(maxValue))) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.maxValue) || ("The max value is " + maxValue + "."));
+                    }
+                    if (minValue && (parseFloat(val) < parseFloat(minValue))) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.minValue) || ("The min value is " + maxValue + "."));
+                    }
+                }
+            }
+            else if (fieldType == _form_validation.availableFieldType.date) {
+                var dateFormat = formField.attr(_form_validation.attr.dateFormat);
+                if (dateFormat) {
+                    var date = null;
+                    try {
+                        date = jQuery.datepicker.parseDate(dateFormat, val);
+                    } catch (e) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.fieldType) || "Invalid date format.");
+                    }
+                    if (date) {
+                        var maxDateOption = formField.datepicker("option", "maxDate");
+                        var maxDate = jQuery.datepicker._determineDate(date, maxDateOption);
+                        var minDateOption = formField.datepicker("option", "minDate");
+                        var minDate = jQuery.datepicker._determineDate(date, minDateOption);
+
+                        if (maxDate && date.getTime() > maxDate.getTime()) {
+                            errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.maxValue) || ("The max value is " + maxValue + "."));
+                        }
+                        if (minDate && date.getTime() < minDate.getTime()) {
+                            errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.minValue) || ("The min value is " + maxValue + "."));
+                        }
+                    }
+                }
+            }
+            else if (fieldType == _form_validation.availableFieldType.radio) {
+                var dateFormat = formField.attr(_form_validation.attr.dateFormat);
+                if (dateFormat) {
+                    var date = null;
+                    try {
+                        date = jQuery.datepicker.parseDate(dateFormat, val);
+                    } catch (e) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.fieldType) || "Invalid date format.");
+                    }
+                    if (date) {
+                        var maxDate = formField.datepicker("option", "maxDate");
+                        var minDate = formField.datepicker("option", "minDate");
+
+                        if (maxDate && date.getTime() > maxDate.getTime()) {
+                            errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.maxValue) || ("The max value is " + maxValue + "."));
+                        }
+                        if (minDate && date.getTime() < minDate.getTime()) {
+                            errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.minValue) || ("The min value is " + maxValue + "."));
+                        }
+                    }
+                }
+            }
+            else {
+                var regExpr = formField.attr(_form_validation.attr.regExpr);
+                if (regExpr) {
+                    var flag = false;
+                    try {
+                        var reg = new RegExp(regExpr);
+                        flag = reg.test(val)
+                    } catch (e) {
+                    }
+
+                    if (!flag) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.regExpr) || ("Mismatched regular expression: " + regExpr + ""));
+                    }
+                }
+            }
+        }
+        //check if answer is require.
+        var required = formField.attr(_form_validation.attr.required);
+        if (required) {
+            if (val) {
+                checkField()
+            } else {
+                errors.push(formField.attr(fieldNamePrefix + _form_validation.attr.required) || "Value is required.");
+            }
+        }
+        else {
+            checkField()
+        }
+        console.log('errors', errors);
+        printFieldErrors(field, errors);
+        return errors;
+    }
+
+    function showModalMask(modalDivId) {
+        jQuery(".modal-backdrop").show();
+    }
+
+    function hideModalMask(modalDivId) {
+        jQuery(".modal-backdrop").hide();
+    }
+
+    function openModal(modalDivId) {
+        jQuery("#" + modalDivId).show(150);
+        jQuery("#" + modalDivId).addClass("in");
+        showModalMask();
+    }
+
+    function closeModal(modalDivId) {
+        jQuery("#" + modalDivId).hide(150);
+        jQuery("#" + modalDivId).removeClass("in");
+        hideModalMask();
+    }
+
+    function showDialog(title, bodyContent) {
+        var _defaultDialog = jQuery("#_defaultDialog");
+        if (_defaultDialog) {
+            var titleElement = jQuery("#_defaultDialog h4[name='title']");
+            if (titleElement) {
+                jQuery(titleElement).html(title)
+            }
+
+            var body = jQuery("#_defaultDialog div[name='body']");
+            if (body) {
+                jQuery(body).html(bodyContent);
+            }
+
+            var closeBtn = jQuery("#_defaultDialog button[name='close']");
+            if (closeBtn) {
+                jQuery(closeBtn).bind('click', function () {
+                    jQuery(closeBtn).hide(150);
+                    jQuery(closeBtn).removeClass("in");
+                    hideModalMask();
+                });
+            }
+
+            _defaultDialog.show(150);
+            _defaultDialog.addClass("in");
+            jQuery(".modal-backdrop").show();
+        }
+    }
+
+    function _disableFormSubmit() {
+        var submitButtons = jQuery("[type!='submit']");
+        for (var i = 0; i < submitButtons.length; i++) {
+            var btn = submitButtons[i];
+            jQuery(btn).bind("click", function () {
+//                console.log("disable submit");
+                return false;
+            });
+        }
+    }
+
+    function disableFormSubmit() {
+        var submitButtons = jQuery("[type='submit']");
+        for (var i = 0; i < submitButtons.length; i++) {
+            var btn = submitButtons[i];
+            jQuery(btn).bind("click", function () {
+                console.log("disable submit");
+                return false;
+            });
+        }
+    }
+    /**
+     * add  init smartPhone  dateField
+     */
+    function initSmartPhoneDateFields(){
+      var dateFields = jQuery("input[" + _form_validation.attr.fieldType + "='"
+                       + _form_validation.availableFieldType.date + "']");
+      for (var i = 0; i < dateFields.length; i++) {
+        var field = jQuery(dateFields[i]);
+        var config = {
+          availableDays: field.attr("availableDays") || ''
+        };
+        field.mobileDatePicker(config);
+      }
+    }
+
+    initDateFields();
+    
+    jQuery(document).ready(function () {
+//            initSmartPhoneDateFields();
+        //     initDateFields();
+    });
+
+</script><script type="text/javascript" src="scripts/jquery.dd.min.js"></script>
+<script type="text/javascript" src="scripts/commonJS.js"></script>
+
+<script type="text/javascript">
+
+    var labels = {};
+    var values = {};
+    var ls, vs;
+
+    ls = new Array("04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM");
+    vs = new Array("04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM");
+    labels["America/Anchorage.Monday"] = ls;
+    values["America/Anchorage.Monday"] = vs;
+
+    ls = new Array("04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM");
+    vs = new Array("04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM");
+    labels["America/Anchorage.Tuesday"] = ls;
+    values["America/Anchorage.Tuesday"] = vs;
+
+    ls = new Array("04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM");
+    vs = new Array("04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM");
+    labels["America/Anchorage.Wednesday"] = ls;
+    values["America/Anchorage.Wednesday"] = vs;
+
+    ls = new Array("04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM");
+    vs = new Array("04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM");
+    labels["America/Anchorage.Thursday"] = ls;
+    values["America/Anchorage.Thursday"] = vs;
+
+    ls = new Array("04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM");
+    vs = new Array("04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM");
+    labels["America/Anchorage.Friday"] = ls;
+    values["America/Anchorage.Friday"] = vs;
+
+      ls = new Array("04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM");
+      vs = new Array("04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM");
+      labels["America/Anchorage.Saturday"] = ls;
+      values["America/Anchorage.Saturday"] = vs;
+
+      ls = new Array("04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM");
+      vs = new Array("04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM");
+      labels["America/Anchorage.Sunday"] = ls;
+      values["America/Anchorage.Sunday"] = vs;
+
+    ls = new Array("05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM");
+    vs = new Array("05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM");
+    labels["America/Los_Angeles.Monday"] = ls;
+    values["America/Los_Angeles.Monday"] = vs;
+
+    ls = new Array("05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM");
+    vs = new Array("05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM");
+    labels["America/Los_Angeles.Tuesday"] = ls;
+    values["America/Los_Angeles.Tuesday"] = vs;
+
+    ls = new Array("05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM");
+    vs = new Array("05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM");
+    labels["America/Los_Angeles.Wednesday"] = ls;
+    values["America/Los_Angeles.Wednesday"] = vs;
+
+    ls = new Array("05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM");
+    vs = new Array("05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM");
+    labels["America/Los_Angeles.Thursday"] = ls;
+    values["America/Los_Angeles.Thursday"] = vs;
+
+    ls = new Array("05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM");
+    vs = new Array("05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM");
+    labels["America/Los_Angeles.Friday"] = ls;
+    values["America/Los_Angeles.Friday"] = vs;
+
+      ls = new Array("05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM");
+      vs = new Array("05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM");
+      labels["America/Los_Angeles.Saturday"] = ls;
+      values["America/Los_Angeles.Saturday"] = vs;
+
+      ls = new Array("05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM");
+      vs = new Array("05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM");
+      labels["America/Los_Angeles.Sunday"] = ls;
+      values["America/Los_Angeles.Sunday"] = vs;
+
+    ls = new Array("07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM");
+    vs = new Array("07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM");
+    labels["America/Chicago.Monday"] = ls;
+    values["America/Chicago.Monday"] = vs;
+
+    ls = new Array("07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM");
+    vs = new Array("07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM");
+    labels["America/Chicago.Tuesday"] = ls;
+    values["America/Chicago.Tuesday"] = vs;
+
+    ls = new Array("07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM");
+    vs = new Array("07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM");
+    labels["America/Chicago.Wednesday"] = ls;
+    values["America/Chicago.Wednesday"] = vs;
+
+    ls = new Array("07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM");
+    vs = new Array("07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM");
+    labels["America/Chicago.Thursday"] = ls;
+    values["America/Chicago.Thursday"] = vs;
+
+    ls = new Array("07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM");
+    vs = new Array("07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM");
+    labels["America/Chicago.Friday"] = ls;
+    values["America/Chicago.Friday"] = vs;
+
+      ls = new Array("07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM");
+      vs = new Array("07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM");
+      labels["America/Chicago.Saturday"] = ls;
+      values["America/Chicago.Saturday"] = vs;
+
+      ls = new Array("07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM");
+      vs = new Array("07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM");
+      labels["America/Chicago.Sunday"] = ls;
+      values["America/Chicago.Sunday"] = vs;
+
+    ls = new Array("03:00 AM - 03:15 AM","03:15 AM - 03:30 AM","03:30 AM - 03:45 AM","03:45 AM - 04:00 AM","04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM");
+    vs = new Array("03:00 AM","03:15 AM","03:30 AM","03:45 AM","04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM");
+    labels["Pacific/Honolulu.Monday"] = ls;
+    values["Pacific/Honolulu.Monday"] = vs;
+
+    ls = new Array("03:00 AM - 03:15 AM","03:15 AM - 03:30 AM","03:30 AM - 03:45 AM","03:45 AM - 04:00 AM","04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM");
+    vs = new Array("03:00 AM","03:15 AM","03:30 AM","03:45 AM","04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM");
+    labels["Pacific/Honolulu.Tuesday"] = ls;
+    values["Pacific/Honolulu.Tuesday"] = vs;
+
+    ls = new Array("03:00 AM - 03:15 AM","03:15 AM - 03:30 AM","03:30 AM - 03:45 AM","03:45 AM - 04:00 AM","04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM");
+    vs = new Array("03:00 AM","03:15 AM","03:30 AM","03:45 AM","04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM");
+    labels["Pacific/Honolulu.Wednesday"] = ls;
+    values["Pacific/Honolulu.Wednesday"] = vs;
+
+    ls = new Array("03:00 AM - 03:15 AM","03:15 AM - 03:30 AM","03:30 AM - 03:45 AM","03:45 AM - 04:00 AM","04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM");
+    vs = new Array("03:00 AM","03:15 AM","03:30 AM","03:45 AM","04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM");
+    labels["Pacific/Honolulu.Thursday"] = ls;
+    values["Pacific/Honolulu.Thursday"] = vs;
+
+    ls = new Array("03:00 AM - 03:15 AM","03:15 AM - 03:30 AM","03:30 AM - 03:45 AM","03:45 AM - 04:00 AM","04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM");
+    vs = new Array("03:00 AM","03:15 AM","03:30 AM","03:45 AM","04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM");
+    labels["Pacific/Honolulu.Friday"] = ls;
+    values["Pacific/Honolulu.Friday"] = vs;
+
+      ls = new Array("03:00 AM - 03:15 AM","03:15 AM - 03:30 AM","03:30 AM - 03:45 AM","03:45 AM - 04:00 AM","04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM");
+      vs = new Array("03:00 AM","03:15 AM","03:30 AM","03:45 AM","04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM");
+      labels["Pacific/Honolulu.Saturday"] = ls;
+      values["Pacific/Honolulu.Saturday"] = vs;
+
+      ls = new Array("03:00 AM - 03:15 AM","03:15 AM - 03:30 AM","03:30 AM - 03:45 AM","03:45 AM - 04:00 AM","04:00 AM - 04:15 AM","04:15 AM - 04:30 AM","04:30 AM - 04:45 AM","04:45 AM - 05:00 AM","05:00 AM - 05:15 AM","05:15 AM - 05:30 AM","05:30 AM - 05:45 AM","05:45 AM - 06:00 AM","06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM");
+      vs = new Array("03:00 AM","03:15 AM","03:30 AM","03:45 AM","04:00 AM","04:15 AM","04:30 AM","04:45 AM","05:00 AM","05:15 AM","05:30 AM","05:45 AM","06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM");
+      labels["Pacific/Honolulu.Sunday"] = ls;
+      values["Pacific/Honolulu.Sunday"] = vs;
+
+    ls = new Array("06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM");
+    vs = new Array("06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM");
+    labels["America/Denver.Monday"] = ls;
+    values["America/Denver.Monday"] = vs;
+
+    ls = new Array("06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM");
+    vs = new Array("06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM");
+    labels["America/Denver.Tuesday"] = ls;
+    values["America/Denver.Tuesday"] = vs;
+
+    ls = new Array("06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM");
+    vs = new Array("06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM");
+    labels["America/Denver.Wednesday"] = ls;
+    values["America/Denver.Wednesday"] = vs;
+
+    ls = new Array("06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM");
+    vs = new Array("06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM");
+    labels["America/Denver.Thursday"] = ls;
+    values["America/Denver.Thursday"] = vs;
+
+    ls = new Array("06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM");
+    vs = new Array("06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM");
+    labels["America/Denver.Friday"] = ls;
+    values["America/Denver.Friday"] = vs;
+
+      ls = new Array("06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM");
+      vs = new Array("06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM");
+      labels["America/Denver.Saturday"] = ls;
+      values["America/Denver.Saturday"] = vs;
+
+      ls = new Array("06:00 AM - 06:15 AM","06:15 AM - 06:30 AM","06:30 AM - 06:45 AM","06:45 AM - 07:00 AM","07:00 AM - 07:15 AM","07:15 AM - 07:30 AM","07:30 AM - 07:45 AM","07:45 AM - 08:00 AM","08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM");
+      vs = new Array("06:00 AM","06:15 AM","06:30 AM","06:45 AM","07:00 AM","07:15 AM","07:30 AM","07:45 AM","08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM");
+      labels["America/Denver.Sunday"] = ls;
+      values["America/Denver.Sunday"] = vs;
+
+    ls = new Array("08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM","08:00 PM - 08:15 PM","08:15 PM - 08:30 PM","08:30 PM - 08:45 PM","08:45 PM - 09:00 PM");
+    vs = new Array("08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM","08:00 PM","08:15 PM","08:30 PM","08:45 PM");
+    labels["America/New_York.Monday"] = ls;
+    values["America/New_York.Monday"] = vs;
+
+    ls = new Array("08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM","08:00 PM - 08:15 PM","08:15 PM - 08:30 PM","08:30 PM - 08:45 PM","08:45 PM - 09:00 PM");
+    vs = new Array("08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM","08:00 PM","08:15 PM","08:30 PM","08:45 PM");
+    labels["America/New_York.Tuesday"] = ls;
+    values["America/New_York.Tuesday"] = vs;
+
+    ls = new Array("08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM","08:00 PM - 08:15 PM","08:15 PM - 08:30 PM","08:30 PM - 08:45 PM","08:45 PM - 09:00 PM");
+    vs = new Array("08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM","08:00 PM","08:15 PM","08:30 PM","08:45 PM");
+    labels["America/New_York.Wednesday"] = ls;
+    values["America/New_York.Wednesday"] = vs;
+
+    ls = new Array("08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM","08:00 PM - 08:15 PM","08:15 PM - 08:30 PM","08:30 PM - 08:45 PM","08:45 PM - 09:00 PM");
+    vs = new Array("08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM","08:00 PM","08:15 PM","08:30 PM","08:45 PM");
+    labels["America/New_York.Thursday"] = ls;
+    values["America/New_York.Thursday"] = vs;
+
+    ls = new Array("08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM","08:00 PM - 08:15 PM","08:15 PM - 08:30 PM","08:30 PM - 08:45 PM","08:45 PM - 09:00 PM");
+    vs = new Array("08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM","08:00 PM","08:15 PM","08:30 PM","08:45 PM");
+    labels["America/New_York.Friday"] = ls;
+    values["America/New_York.Friday"] = vs;
+
+      ls = new Array("08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM","08:00 PM - 08:15 PM","08:15 PM - 08:30 PM","08:30 PM - 08:45 PM","08:45 PM - 09:00 PM");
+      vs = new Array("08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM","08:00 PM","08:15 PM","08:30 PM","08:45 PM");
+      labels["America/New_York.Saturday"] = ls;
+      values["America/New_York.Saturday"] = vs;
+
+      ls = new Array("08:00 AM - 08:15 AM","08:15 AM - 08:30 AM","08:30 AM - 08:45 AM","08:45 AM - 09:00 AM","09:00 AM - 09:15 AM","09:15 AM - 09:30 AM","09:30 AM - 09:45 AM","09:45 AM - 10:00 AM","10:00 AM - 10:15 AM","10:15 AM - 10:30 AM","10:30 AM - 10:45 AM","10:45 AM - 11:00 AM","11:00 AM - 11:15 AM","11:15 AM - 11:30 AM","11:30 AM - 11:45 AM","11:45 AM - 12:00 PM","12:00 PM - 12:15 PM","12:15 PM - 12:30 PM","12:30 PM - 12:45 PM","12:45 PM - 01:00 PM","01:00 PM - 01:15 PM","01:15 PM - 01:30 PM","01:30 PM - 01:45 PM","01:45 PM - 02:00 PM","02:00 PM - 02:15 PM","02:15 PM - 02:30 PM","02:30 PM - 02:45 PM","02:45 PM - 03:00 PM","03:00 PM - 03:15 PM","03:15 PM - 03:30 PM","03:30 PM - 03:45 PM","03:45 PM - 04:00 PM","04:00 PM - 04:15 PM","04:15 PM - 04:30 PM","04:30 PM - 04:45 PM","04:45 PM - 05:00 PM","05:00 PM - 05:15 PM","05:15 PM - 05:30 PM","05:30 PM - 05:45 PM","05:45 PM - 06:00 PM","06:00 PM - 06:15 PM","06:15 PM - 06:30 PM","06:30 PM - 06:45 PM","06:45 PM - 07:00 PM","07:00 PM - 07:15 PM","07:15 PM - 07:30 PM","07:30 PM - 07:45 PM","07:45 PM - 08:00 PM","08:00 PM - 08:15 PM","08:15 PM - 08:30 PM","08:30 PM - 08:45 PM","08:45 PM - 09:00 PM");
+      vs = new Array("08:00 AM","08:15 AM","08:30 AM","08:45 AM","09:00 AM","09:15 AM","09:30 AM","09:45 AM","10:00 AM","10:15 AM","10:30 AM","10:45 AM","11:00 AM","11:15 AM","11:30 AM","11:45 AM","12:00 PM","12:15 PM","12:30 PM","12:45 PM","01:00 PM","01:15 PM","01:30 PM","01:45 PM","02:00 PM","02:15 PM","02:30 PM","02:45 PM","03:00 PM","03:15 PM","03:30 PM","03:45 PM","04:00 PM","04:15 PM","04:30 PM","04:45 PM","05:00 PM","05:15 PM","05:30 PM","05:45 PM","06:00 PM","06:15 PM","06:30 PM","06:45 PM","07:00 PM","07:15 PM","07:30 PM","07:45 PM","08:00 PM","08:15 PM","08:30 PM","08:45 PM");
+      labels["America/New_York.Sunday"] = ls;
+      values["America/New_York.Sunday"] = vs;
+
+
+    // var dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var dayOfWeek = jQuery.extend([], date_days);
+
+    $(document).ready(function () {
+        var apptTime = '',
+                apptTimeZone = '',
+                apptTimeFld = $('#appointmentTime'),
+                apptTmZFld = $('#appointmentTimeZone');
+        if (apptTime && apptTimeFld && apptTmZFld) {
+            apptTmZFld.val(apptTimeZone);
+            onApptTimeZoneChanged();
+            apptTimeFld.val(apptTime);
+        }
+        /**
+         *  readOnly phoneNumber
+         */
+        if (true) {
+            $('#appointmentPhoneNum').attr('readonly', 'readonly');
+            $('#appointmentPhoneCountryCode_msdd').css({'opacity':'0','position':'absolute'});
+            $('#appointmentPhoneNum').attr('aria-hidden', true);
+            $('#appointmentPhoneCountryCode_msdd').attr('aria-hidden', true);
+        }
+
+        $('#appointmentDate').bind('blur', function(){
+          onApptDateChanged();
+        });
+
+        $('#confirmBtn').click(function(){
+            $("#appointmentPhoneCountryCodeHidden").val($("#appointmentPhoneCountryCode").val());
+            $("#languageHidden").val($("#language1").val());
+        });
+        if($("#language1").val()=="")
+        $('#language_show_hide').hide();
+
+        $('#main_content_container select').css('width', '26em').css('height', '35px');
+        $('#main_content_container select#appointmentTime').select2({minimumResultsForSearch: Infinity});
+    });
+
+
+    function onApptDateChanged() {
+        onApptTimeZoneChanged();
+    }
+    function onApptTimeZoneChanged() {
+        var apptTimeZone = $('#appointmentTimeZone').val(),
+                apptDateStr = $('#appointmentDate').val();
+
+        loadApptTime(apptTimeZone, apptDateStr);
+
+    }
+
+    function changeHomePhoneStatus() {
+        var byHomePhoneBox = $('#byHomePhoneBox').prop('checked');
+        if (byHomePhoneBox) {
+//      $('#homePhoneNum').removeAttr('readonly');
+            $('#byHomePhone').val(true);
+        } else {
+//      $('#homePhoneNum').attr('readonly','readonly').val('');
+            $('#byHomePhone').val(false);
+        }
+    }
+
+    function changeMobilePhoneStatus() {
+        var byMobilePhoneBox = $('#byMobilePhoneBox').prop('checked');
+        if (byMobilePhoneBox) {
+//      $('#mobilePhoneNum').removeAttr('readonly');
+            $('#byMobilePhone').val(true);
+        } else {
+//      $('#mobilePhoneNum').attr('readonly','readonly').val('');
+            $('#byMobilePhone').val(false);
+        }
+    }
+
+    function changeWorkPhoneStatus() {
+        var byWorkPhoneBox = $('#byWorkPhoneBox').prop('checked');
+        if (byWorkPhoneBox) {
+//      $('#workPhoneNum').removeAttr('readonly');
+            $('#byWorkPhone').val(true)
+        } else {
+//      $('#workPhoneNum').attr('readonly','readonly').val('');
+            $('#byWorkPhone').val(false);
+        }
+    }
+
+    function changeOtherPhoneStatus() {
+        var byOtherPhoneBox = $('#byOtherPhoneBox').prop('checked');
+        if (byOtherPhoneBox) {
+            $('#otherPhoneNum').removeAttr('readonly');
+            $('#byOtherPhone').val(true);
+        } else {
+            $('#otherPhoneNum').attr('readonly', 'readonly').val('');
+            $('#byOtherPhone').val(false);
+        }
+    }
+
+    function changeApptPhoneStatus(showCountryCode) {
+        var byAppointmentPhoneBox = $('#byAppointmentPhoneBox').prop('checked');
+        if (byAppointmentPhoneBox) {
+            $('#appointmentPhoneNum').removeAttr('readonly');
+            $('#appointmentPhoneNum').removeAttr('aria-hidden');
+            if (showCountryCode) {
+                $('#appointmentPhoneCountryCode_msdd').css({'opacity':'1','position':'relative'});
+                $('#appointmentPhoneCountryCode_msdd').removeAttr('aria-hidden');
+            }
+            $('#byAppointmentPhone').val(true);
+        } else {
+            $('#appointmentPhoneNum').attr('readonly', 'readonly').val('');
+            $('#appointmentPhoneCountryCode_msdd').css({'opacity':'0','position':'absolute'});
+            $('#byAppointmentPhone').val(false);
+
+            $('#appointmentPhoneNum').attr('aria-hidden', true);
+            $('#appointmentPhoneCountryCode_msdd').attr('aria-hidden', true);
+        }
+    }
+
+    function loadApptTime(timeZone, date) {
+        var apptDate = $('#appointmentDate').datepicker('getDate');
+
+        if(apptDate){
+          let dow = apptDate.getDay(),
+                  key = timeZone + '.' + dayOfWeek[dow];
+
+          var labelsData = labels[key],
+                  valuesData = values[key];
+          $('#appointmentTime').empty();
+          var options = '';
+
+          if (labelsData && labelsData.length > 0) {
+            $('#appointmentTime').removeAttr('disabled');
+            for (var i = 0, len = labelsData.length; i < len; i++) {
+              options += '<option value="' + valuesData[i] + '">' + labelsData[i] + '</option>';
+            }
+
+            if (options != '') {
+              $(options).appendTo('#appointmentTime');
+            }
+          }
+          var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(navigator.userAgent);
+          if(!isMobileDevice){
+            $('#appointmentTime').select2({minimumResultsForSearch: Infinity});
+          }
+        }
+    }
+
+</script>
+</body>
+</html>

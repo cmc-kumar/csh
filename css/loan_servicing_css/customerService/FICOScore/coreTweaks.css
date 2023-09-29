@@ -1,0 +1,62 @@
+.fico_multicolumn {
+
+  width:600px;
+  padding-bottom:0px;
+  margin-bottom:0px;
+  height:245px;
+  border: 1px solid #dcdcdc;
+  border-radius: 30px;
+  box-shadow: 0 -1px 2px #e8e7e8 inset;
+}
+
+.fico_multicolumn .multicolumn_column {
+  width:300px!important;
+}
+
+.fico_multicolumn .multicolumn_column_container {
+ margin-left:0px;
+margin-right:0px;
+}
+
+.fico_multicolumn .multicolum_column:first-child img {
+  z-index:0;
+}
+
+.fico_multicolumn .multicolumn_column.width_last img {
+  margin-top:-30px;
+  z-index:0;
+}
+
+.fico_multicolumn .multicolumn_column.width_last p {
+  margin-top:-30px!important;
+  z-index:1;
+}
+
+.ficoscore {
+  position:absolute;
+  margin-top:-168px;
+  left:95px;
+  font-size:10em;
+  z-index:1;
+  color:#003F5E;
+}
+
+@media only screen and (max-width:640px) {
+  .fico_multicolumn {
+    width:280px!important;
+    height:auto;
+  }
+  .fico_multicolumn .multicolumn_column {
+    margin-top:0px!important;
+    width:280px!important;
+  }
+  .fico_multicolumn .multicolumn_column_container {
+    margin-top:0px!important;
+  }
+  
+  .ficoscore {
+    left:89px;
+    font-size:9.5em;
+    margin-top:-158px;
+  }
+}

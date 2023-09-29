@@ -1,0 +1,210 @@
+/* Main Top Title Main Content Fix */
+#main_top {
+    padding-bottom:0px;
+}
+/* End Main Top Title Main Content Fix */
+
+/* header and nav */
+#user_logout {
+   right:20px;
+   position:absolute;
+   z-index:2;
+}
+
+#non_menu_item_0
+{
+    width: 31%;
+}
+
+#non_menu_item_0 a {
+    width:75%;
+    float:right;
+    position:relative;
+    display:block;
+    border-top: 1px solid #9FBD4A;
+    border-bottom: 1px solid #9FBD4A;
+}
+
+.top_nav_target {
+    width:24%;
+}
+
+#mobile_nav > ul > li:first-child + li {
+    border-left:none;
+    width:auto;
+    font-size:1.3em;
+    padding-right:20px;
+    /*padding-top:10px;*/
+    height:55px;
+    text-align:center;
+}
+
+#mobile_nav > ul > li:first-child + li a {
+    padding:0px;
+    font-size:1.3em;
+}
+
+#mobile_nav ul li:last-child a {
+    border-right:none;
+}
+
+.mobile_nav_ad {
+    text-align:center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom:10px;
+}
+
+#mobile_nav_flyout_left .accordion.active +.accordion_content + .accordion {
+    margin-top:0px;
+    border-top:none;
+}
+
+#mobile_nav_flyout_left .accordion_content + .accordion {
+    border-top: 1px solid #edeff1;
+}
+
+/* end header and nav */
+
+/* loan payment summary */
+
+.loanSummaryAlignShunt + * {
+    margin-top:.2em;
+}
+
+input[type*="number"] {
+    height: 25px;
+    line-height: 30px;
+    padding: 5px 10px;    
+    position: relative;
+    vertical-align: middle;
+    font-size: 1.6em;
+    text-align: right;
+    -moz-appearance: textfield;    
+}
+
+input[type*=number]::-webkit-inner-spin-button, input[type*=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+     margin: 0;
+}
+
+input[type*=number]::-ms-clear {
+    display: none;
+}
+
+input.widthinput-short[type*="text"] {
+    width: 80px;
+}
+
+
+
+/* end loan payment */
+
+/* delinquent top alert */
+
+.multicolumn_row_delinquent a[name], .multicolumn_row_delinquent a[name]:active, .multicolumn_row_delinquent a[name]:visited {
+  color: #008dc9!important;
+  cursor: pointer!important; 
+}
+
+.multicolumn_row_delinquent a[name]:hover {
+  color: #006b9e!important;
+  cursor: pointer!important;
+}
+
+.multicolumn_row_delinquent a.text_black[name], .multicolumn_row_delinquent a.text_black[name]:active, .multicolumn_row_delinquent a.text_black[name]:visited, .multicolumn_row_delinquent a.text_black[name]:hover {
+  color: #333!important;
+  cursor: text!important; 
+}
+
+/* end delinquent top alert */
+
+/* make a payment */
+
+.multicolumn_row_make_payment {
+    border-top:1px solid #ccc;
+    background-color: #F1F5F9;
+    background-image: url(../../images/loan_servicing/design/make_payment_bg_shunt.gif);
+    background-size:25% 100%;
+    background-repeat:no-repeat;
+    padding:10px;
+}
+
+.multicolumn_row_make_payment .multicolumn_column:first-child .multicolumn_column_container {
+    text-align:right;
+    padding-right:10px;
+}
+
+.multicolumn_row_make_payment .multicolumn_column.width_last .multicolumn_column_container {
+    padding-left:5px;
+}
+
+.multicolumn_row_make_payment .multicolumn_column.width_last .multicolumn_column_container > div {
+    border-left:1px solid #999; 
+    padding-left:20px;
+}
+
+@media only screen and (max-width:850px) {
+    .multicolumn_row_make_payment .width_25 .button_standard {
+        font-size:1em;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .multicolumn_row_make_payment {
+        background-image:none;
+    }
+    .multicolumn_row_make_payment .multicolumn_column {
+        float:left!important;
+        width:50%!important;
+    }
+    .multicolumn_row_make_payment .multicolumn_column.width_last .multicolumn_column_container {
+        padding-left:10px!important;
+        margin-top:0px;
+    }
+    .multicolumn_row_make_payment .multicolumn_column:first-child .multicolumn_column_container {
+        text-align: left;
+    }
+    .multicolumn_row_make_payment .width_25 .button_standard {
+        font-size:1.26em;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+     .multicolumn_row_make_payment .multicolumn_column {
+        float:none!important;
+        width:auto!important;
+    }
+    .multicolumn_row_make_payment .multicolumn_column.width_last .multicolumn_column_container {
+        padding-left:0px!important;
+        margin-top:20px;
+    }
+    .multicolumn_row_make_payment .multicolumn_column.width_last .multicolumn_column_container > div {
+        border-left:none; 
+        padding-left:0px;
+    }
+}
+
+
+/* end make a payment*/
+
+
+/* cross sell */
+
+.multicolumn_column.bg_faded_light_grey > .multicolumn_column_container {
+  color: #333;
+}
+
+/* end cross sell */
+
+/* background colors */
+
+.bg_light_grey, a.bg_light_grey, a.bg_light_grey:visited, a.bg_light_grey:hover, a.bg_light_grey:active {
+    background-color: #F1F5F9;
+}
+
+/* end background colors */
+
+[disabled*=true] {
+ background:#eee!important;
+ color:#ccc!important;
+}

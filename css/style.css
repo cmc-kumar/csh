@@ -1,0 +1,85 @@
+.input_submit {
+  border: none;
+  font-family: "Source Sans Bold" !important;
+  font-weight: bold;
+}
+
+.offset-r10 {
+  margin-right: 10px !important;
+}
+
+.break_all_text {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+a.disabled, a.disabled:active, a.disabled:hover, a.disabled:visited {
+  background: none;
+  color: #999;
+  cursor: default;
+}
+
+.req {
+  font-size: 1em !important;
+  color: #e0bd93;
+  font-weight: bold;
+}
+
+.font_bold {
+  font-weight: bold !important;
+}
+
+.custom-li {
+  margin-left: 2em;
+}
+
+.text-upper{
+  text-transform: uppercase;
+}
+
+
+.text_step_italic {
+  font-size: 1.5em;
+  color: #759DC3;
+  font-style: italic;
+  margin: 0 0 0 0;
+  font-weight: bold;
+}
+
+.marginTop0{
+  margin-top:0;
+}
+
+.marginTop05{
+  margin-top: 0.5em ;
+}
+
+.warning{
+  color: red !important;
+}
+
+span.csv {
+  background-image: url(../images/ico_file_csv.png);
+  background-repeat: no-repeat;
+}
+
+span.excel {
+  background-image: url(../images/ico_file_excel.png);
+  background-repeat: no-repeat;
+}
+
+span.pdf {
+  background-image: url(../images/ico_file_pdf.png);
+  background-repeat: no-repeat;
+}
+
+span.xml {
+  background-image: url(../images/ico_file_xml.png);
+  background-repeat: no-repeat;
+}
+
+span.export {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 4px 1px 20px;
+}

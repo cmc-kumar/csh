@@ -1,0 +1,310 @@
+
+
+/*=====================================================*/
+/* CA-11591 Show/Hide dependent task elements          */
+/*=====================================================*/
+.workflow_group_hide{
+    display:none;
+}
+
+.add-more-question-text{
+    border: 1px solid #ccc;
+    width: auto;
+    line-height: 1.5em;
+    padding: 5px 15px 5px 5px;
+    font-size: 12px;
+}
+
+.add-more-before-question-text{
+    border: 1px solid #ccc;
+    width: auto;
+    line-height: 1.5em;
+    padding: 5px 15px 5px 5px;
+    margin-left: 110px;
+    font-size: 12px;
+}
+
+.add-more-after-question-text{
+    width: auto;
+    line-height: 1.5em;
+    padding: 5px 15px 5px 5px;
+    margin-left: 110px;
+    font-size: 12px;
+}
+
+.addMore_Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin: 0 auto;
+    width: 100%;
+    height: 3em;
+    background-color: #0099d8;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.btn_hide{
+    display: none !important;
+}
+
+/* YES/NO checkbox style
+ * https://freefrontend.com/css-toggle-switches/
+ * https://codepen.io/himalayasingh/pen/EdVzNL
+ * https://codepen.io/z-/pen/XPQyMo
+ * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch
+*/
+.row {
+    display: table-row;
+}
+
+.toggle-button-cover {
+    display: table-cell;
+    position: relative;
+    /*width: 200px;*/
+    /*height: 140px;*/
+    box-sizing: border-box;
+}
+
+.button-cover {
+    /*height: 100px;*/
+    margin: 0 0 0 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+/*.button-cover:before {*/
+/*    counter-increment: button-counter;*/
+/*    content: counter(button-counter);*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    color: #d7e3e3;*/
+/*    font-size: 12px;*/
+/*    line-height: 1;*/
+/*    padding: 5px;*/
+/*}*/
+
+.button-cover-divider:before {
+    /*counter-increment: button-counter;*/
+    content: '|';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+
+.button-cover, .knobs, .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.show-more-toggle-button {
+    position: relative;
+    /*top: 50%;*/
+    width: 74px;
+    height: 36px;
+    /*margin: -20px auto 0 auto;*/
+    margin: 0 auto 0 auto;
+    overflow: hidden;
+}
+
+.show-more-toggle-button.r, .show-more-toggle-button.r .layer {
+    border-radius: 100px;
+}
+
+.show-more-toggle-button.b2 {
+    border-radius: 2px;
+}
+
+.show-more-toggle-checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 10 */
+.yes-no-button-10 .knobs:before, .yes-no-button-10 .knobs:after, .yes-no-button-10 .knobs span {
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 2px;
+    transition: 0.3s ease all;
+}
+
+.yes-no-button-10 .knobs:before {
+    content: '';
+    left: 4px;
+    /*background-color: #03A9F4;*/
+    background-color: #F44336;
+}
+
+.yes-no-button-10 .knobs:after {
+    content: 'YES';
+    right: 4px;
+    color: #4e4e4e;
+}
+
+.yes-no-button-10 .knobs span {
+    display: inline-block;
+    left: 4px;
+    color: #fff;
+    z-index: 1;
+}
+
+.yes-no-button-10 .show-more-toggle-checkbox:checked + .knobs span {
+    color: #4e4e4e;
+}
+
+.yes-no-button-10 .show-more-toggle-checkbox:checked + .knobs:before {
+    left: 42px;
+    /*background-color: #F44336;*/
+    background-color: #03A9F4;
+}
+
+.yes-no-button-10 .show-more-toggle-checkbox:checked + .knobs:after {
+    color: #fff;
+}
+
+.yes-no-button-10 .show-more-toggle-checkbox:checked ~ .layer {
+    /*background-color: #fcebeb;*/
+    background-color: #ebf7fc;
+}
+
+.restore-icon{
+    position: relative;
+    top: 5px;
+    float: right;
+    /*left: 50%;*/
+    right: 5px;
+    cursor: pointer;
+}
+
+.restore-icon:hover{
+    color:green;
+}
+
+.notification-badge {
+    font-family: Muli, sans-serif;
+    position: relative;
+    top: -20px;
+    /*right: 5px;*/
+    /*margin: 0 -.8em;*/
+    padding: 2px 5px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #ff4081;
+    box-shadow: 0 0 10px 0 #ff4081
+}
+
+/**
+ * Group Delete Icon & Tooltip
+ */
+.group-delete-icon{
+    position: relative;
+    top: 5px;
+    float: right;
+    right: 5px;
+    cursor: pointer;
+}
+
+.group-delete-icon:hover{
+    color:green;
+}
+
+.hide-animate{
+    visibility: hidden;
+    opacity: 0;
+    background-color: #f1eded;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+
+/* ToolTip Css**/
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black; !* If you want dots under the hoverable text *!*/
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    /*width: 120px;*/
+    min-width: 200px;
+    max-width: 250px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 12px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 999;
+    bottom: 125%;
+    left: 50%;
+    /*margin-left: -100px;*/
+    margin-left: -160px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    /*left: 50%;*/
+    left: 70%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/*=====================================================*/
+/* CA-11591 Show/Hide dependent task elements (END)    */
+/*=====================================================*/

@@ -1,0 +1,258 @@
+.text-transform{
+    text-transform: Uppercase;
+}
+
+.bg_grey, a.bg_grey, a.bg_grey:visited, a.bg_grey:hover, a.bg_grey:active{
+    background-color: #e1e1e1;
+    color: #fff;
+}
+
+.page-header-stuffix{
+    font-size:14px; margin-left:20px;
+}
+
+@media screen and (max-width: 850px){
+    .page-header-stuffix{
+        font-size:14px; margin-left:2px;
+    }
+}
+.multicolumn_row .multicolumn_column{
+    word-wrap: break-word;
+    word-break:break-word;
+}
+.break-all{
+    /*CA-8555*/
+    /*word-break: break-all;*/
+}
+
+.preferred_language {
+    font-size: 1em;
+    height: 26px;
+    padding-top:0px;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.welcome_info{
+    display: inline-block;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mobile-select-small{
+    font-size: 12px;
+    padding:5px 0;
+}
+@media only screen and (max-width: 850px){
+    .welcome_info {
+        display: inline-block;
+        width: 500px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .multicolumn_row>.multicolumn_column>.multicolumn_column_container>p{
+        min-height: 25px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .welcome_info {
+        display: inline-block;
+        width: 340px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .welcome_info {
+        display: inline-block;
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 0 0 10px;
+        text-overflow: ellipsis;
+        padding-top: 7px;
+        position: relative;
+        /*top: 10%;*/
+    }
+
+    .preferred_language {
+        margin: 0;
+    }
+    .logo {
+        width: 49px!important;
+    }
+    .login_page .logo {
+        width: 90px!important;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .welcome_info {
+        display: inline-block;
+        width: 230px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 0 0 10px;
+        text-overflow: ellipsis;
+        padding-top: 7px;
+        position: relative;
+        /*top: 10%;*/
+    }
+    .preferred_language {
+        margin: 0;
+    }
+    .logo {
+        width: 49px!important;
+    }
+    .login_page .logo {
+        width: 90px!important;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .welcome_info {
+        display: inline-block;
+        width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 0 0 10px;
+        text-overflow: ellipsis;
+        padding-top: 7px;
+        position: relative;
+        /*top: 10%;*/
+    }
+    .preferred_language {
+        margin: 0;
+    }
+    .logo {
+        width: 49px!important;
+    }
+    .login_page .logo {
+        width: 90px!important;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .welcome_info {
+        display: inline-block;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 0 0 10px;
+        text-overflow: ellipsis;
+        padding-top: 7px;
+        position: relative;
+        /*top: 10%;*/
+    }
+    .preferred_language {
+        margin: 0;
+    }
+    .logo {
+        width: 49px!important;
+    }
+    .login_page .logo {
+        width: 90px!important;
+    }
+}
+
+/*@media only screen and (max-width: 850px){
+    h1.text-transform {
+        line-height: 1px;
+    }
+}*/
+
+@media only screen and (max-width: 330px){
+    .welcome_info {
+        display: inline-block;
+        width: 170px;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 0 0 10px;
+        text-overflow: ellipsis;
+        padding-top: 7px;
+        position: relative;
+        /*top: 10%;*/
+    }
+    .preferred_language {
+        margin: 0;
+    }
+    .logo {
+        width: 49px!important;
+    }
+    .login_page .logo {
+        width: 90px!important;
+    }
+}
+
+.top_nav_target.flyout{
+    overflow: auto;
+}
+
+@media print {
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+    padding: 5px 5px 5px 10px;
+}
+
+.modal-header h4 {
+    height: 20px;
+    line-height: 20px;
+    color: #333;
+    font-weight: 100;
+}
+
+.modal-header h4.warningtit {
+    text-indent: 22px;
+    background: url(../images/icon-warning-big.png) no-repeat;
+}
+
+.color-error {
+    color: #d73726 !important;
+}
+
+.td-icon {
+    width: 0.5em;
+    height: 0.5em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.td-icon.expand,.td-icon.collapse{
+    vertical-align: middle;
+    font-size: 2.5rem;
+    color: #0076A0;
+    margin-bottom: -5px;
+    margin-top: -7px;
+}
+
+.td-icon.collapse{
+    color: #000000;
+}
+
+.td-icon.expand,.td-icon.collapse{
+    text-align: center;
+    display: inline-block;
+}
+
+.td-icon.collapse {
+    display: none;
+}
+
+.logo_mobile{width: 70px!important;}
+
+.border-bottom-item{
+  border-bottom:1px solid #edeff1;
+}

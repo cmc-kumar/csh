@@ -1,0 +1,1950 @@
+
+
+
+
+
+            
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Contact</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="robots" content="index, follow"/>
+  
+            <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+            <link rel="icon" type="image/ico" href="favicon.ico"/>
+            <link rel="apple-touch-icon" href="favicon.ico"/>
+            
+  
+    <link href="css/global_css/global_framework_1.css" type="text/css" rel="stylesheet"/>
+    <link href="css/global_css/default_styles_1.css" type="text/css" rel="stylesheet"/>
+    <link href="css/katabat_css/core/katabat_core_1.css" type="text/css"
+          rel="stylesheet"/>
+    <link href="css/katabat_core_2_css/katabat_core_2.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="css/cmc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/client.css" rel="stylesheet" type="text/css"/>
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+     <link href="css/select2.min.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/jquery-3.5.1.js" type="text/javascript"></script>
+    <script>
+        var enter_label = "Enter",
+            enter_as_label = "Enter as a",
+            enter_as_currency = "Enter in currency format",
+            enter_as_text = "Enter as Text",
+            date_format_label_prefix = "Date Format",
+            required_label = "required",
+            selected_option_label= "Selected",
+            siteDateFormat_label = "Month Day , Year",
+            dropdown_count_label = "There are {0} items in the list",
+            dropdown_count_endOfList = "End of list",
+            page_title_screen_reader_suffix = "Last 4 digits of Account Number, 1164";
+
+    </script>
+    <style type="text/css">
+      .ui-datepicker .ui-datepicker-title {
+        margin: 0px 1.3em;
+        line-height: 1.8em;
+        text-align: center;
+      }
+    </style>
+
+  <link rel="stylesheet" href="css/common_style.css" type="text/css" title="" charset="utf-8"/>
+ 
+  
+  
+  <!-- End Omniture -->
+  <script type="text/javascript">
+    /**
+     * change preferred contact method
+     * @param checkBoxName
+     */
+    function changePreferredContactMethod(checkBoxName) {
+      if (undefined == checkBoxName || '' === checkBoxName || ' ' === checkBoxName) {
+        return;
+      }
+      var preferredBox = $('#' + checkBoxName).prop('checked');
+      var preferredMethodId = checkBoxName.replace('Box', '');
+      if (preferredBox) {
+        $('#' + preferredMethodId).val(true);
+      } else {
+        $('#' + preferredMethodId).val(false);
+      }
+    }
+    /**
+     * change preferTextMessage value
+     */
+    function changePreferTextMessage() {
+      var preferTextMessageBox = $('#preferTextMessageBox').prop('checked');
+      if (preferTextMessageBox) {
+        $('#smsPhonePhoneNumDiv').css('display', "block");
+        $('#preferTextMessage').val(true);
+      } else {
+        $('#smsPhonePhoneNumDiv').css('display', "none");
+        $('#smsPhonePhoneNum').val('');
+        $('#preferTextMessage').val(false);
+      }
+    }
+    /**
+     *  change state when country changed
+     */
+    function displayState(countryCode) {
+//      var countryCode = $("#homeAddress\\.address\\.country").val();
+      $.ajax({
+        url: '/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/country/loadStateByCountryCode',
+        cache: false,
+        dataType: "json",
+        data: {ccode: countryCode},
+        type: "GET",
+        success: function (resp) {
+          if (resp) {
+            var states = eval(resp);
+            if (states && states.length > 0) {
+              var provinceFld = document.getElementById("homeAddress.address.province");
+              provinceFld.innerHTML = '';
+              var optHtml = '';
+              states.forEach(function (state) {
+//                if (state && state.value) {
+                optHtml += '<option value="' + state.value + '">' + state.label + '</option>';
+//                }
+              });
+              provinceFld.innerHTML = optHtml;
+            }
+          }
+        }
+      });
+    }
+  </script>
+</head>
+<body class="responsive">
+
+            <div id="mobile_nav_flyout_left" class="small medium inactive">
+
+              <div id="mobile_nav_flyout_left_container">
+               <a href="javascript:mobile_menu('mobile_nav_flyout_left')" role="menuitem" class="vertical bg_blue button_menu_item">
+               <span class="h3 alignment_wide text-transform">
+               <img class="logo_mobile" role="img" alt="Mercury" src="images/logo/logo.png">
+               </span>
+                    <span class="fa-chevron-left text_white" aria-hidden="true"></span>
+                </a>
+
+                <!---->
+
+                  <div class="bg_off_white">
+
+                        <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large border-bottom-item inactive">
+                              <a title="Account Summary" role="menuitem" class="block horizontal active" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/html/acctSummary">
+                                  <span class="text-transform">Account Summary</span>
+                              </a>
+                        </h3>
+
+                        <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large inactive">
+                            <a title="Payment Options" aria-expanded="false" aria-haspopup="true" class="block horizontal inactive" href="javascript:void(0);" onclick="more(this)">
+                                <span class="plus_minus" aria-hidden="true"><span class="fa-plus" aria-hidden="true"></span></span>
+                                <span class="text-transform">Payment Options</span>
+                            </a>
+                        </h3>
+                        <div class="accordion_content" aria-hidden="true">
+                            <a title="Make A Payment" class="vertical bg_white button_menu_item " role="menuitem" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/payment">
+                                <span class="indent_1 alignment_wide">Make A Payment</span><span class="fa-chevron-right" aria-hidden="true"></span>
+                            </a>
+                            <a title="Review Payment Offers" class="vertical bg_white button_menu_item " role="menuitem" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/program">
+                                <span class="indent_1 alignment_wide">Review Payment Offers</span><span class="fa-chevron-right" aria-hidden="true"></span>
+                            </a>
+                            <a title="Manage Payment Methods" class="vertical bg_white button_menu_item " role="menuitem" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/payments/manageBankAccounts">
+                                <span class="indent_1 alignment_wide">Manage Payment Methods</span><span class="fa-chevron-right" aria-hidden="true"></span>
+                            </a>
+                              <a title="Promise To Pay" class="vertical bg_white button_menu_item " role="menuitem" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/promise">
+                                  <span class="indent_1 alignment_wide">Promise To Pay</span><span class="fa-chevron-right" aria-hidden="true"></span>
+                              </a>
+                        </div>
+
+                        <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large active">
+                            <a title="Update Contact Info" class="block horizontal active" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/flow/contactFlow">
+                                <span class="text-transform">Update Contact Info</span>
+                            </a>
+                        </h3>
+
+
+                        <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large active">
+                            <a title="Schedule Appointment" class="block horizontal active" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/appointment/list">
+                                <span class="text-transform">Schedule Appointment</span>
+                            </a>
+                        </h3>
+
+
+
+
+                    <h3 class="indent_1 accordion accordion_small accordion_medium accordion_large active">
+                          <a title="Logout" role="menuitem" class="block horizontal active" href="#" onclick="checkLogoffWorkflow('mobile');">
+                              <span class="text-transform">Logout</span>
+                          </a>
+                    </h3>
+                  </div>
+
+              </div>
+             </div>
+
+             <div id="mobile_nav_flyout_right" class="small medium inactive">
+                <div id="mobile_nav_flyout_right_container">
+                </div>
+              </div>
+
+             <script type="text/javascript">
+             function changeMobDefaultLanguage(selectLanguage){
+             if(selectLanguage=='en_US'){
+             document.getElementById('English_icon').className='fa-check';
+             document.getElementById('French_icon').className='';
+             }else if(selectLanguage=='fr_FR'){
+             document.getElementById('English_icon').className='';
+             document.getElementById('French_icon').className='fa-check';
+             }
+               var languagePreference = selectLanguage
+                var currentUrl = window.location.href;
+                  if(currentUrl.indexOf('security') < 0 && currentUrl.indexOf("") > -1){
+                    $.get('/lang/changeLang', {'lang': languagePreference}, function(result){
+                        try{
+                          clearInterval(hashInterval);
+                        }catch(e){}
+                        currentUrl = currentUrl.split('#')[0] + '#' + languagePreference;
+                        window.location.href = currentUrl;
+
+                        setTimeout(function(){
+                          window.location.reload();
+                        },100);
+                   });
+                  } else {
+                    <!--var url = new URL(currentUrl);-->
+                    <!--url.searchParams.set("lang", languagePreference); // setting your param-->
+                    <!--var newUrl = url.href;-->
+                    <!--window.location.href=newUrl;-->
+                     var newUrl=currentUrl.split("?")[0]+"?lang="+languagePreference
+                     window.location.href=newUrl
+
+                  }
+                  }
+             </script>
+
+            
+
+<div id="page_center">
+  <div id="page_center_container">
+    <div id='content'>
+      <div id='content_container'>
+        <div id='header'>
+          <div id='header_container'>
+          
+           <div id="mobile_nav" class="small medium no-print">
+              <ul>
+                <li class="icon">
+                    <a class="menu_activator" id="mobile-main-menu-icon" a-open-text="Open Menu Button" a-close-text="Close Menu Button" aria-label="Open Menu Button" href="javascript:mobile_menu('mobile_nav_flyout_left')"><span
+                      class="fa-bars"></span></a>
+                </li>
+                <li>
+                    <span class="weight_bold welcome_info">
+Welcome<br>
+                        EASYPAY ROBINSON
+                    </span>
+                    <!--<span>-->
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+               <!--</span>-->
+                </li>
+                <li class="icon">
+                  <a href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/html/acctSummary">
+                    <img class="logo" role="img" alt="Mercury" src="images/logo/logo.png">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="user_logout" class="large no-print">
+                <div id="user_logout_container">
+                  <p class="weight_bold">Welcome&nbsp;
+
+                          EASYPAY ROBINSON
+                    <span aria-hidden="true">&nbsp;|&nbsp;</span>
+                    <a href="#" onclick="checkLogoffWorkflow();">Logout</a>
+
+
+                  </p>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+             function changeDefaultLanguage(selectLanguage){
+                  if(selectLanguage == 'mobile') {
+                    console.log($( "#mobLanguagePreference option:selected" ).val());
+                    var languagePreference = $( "#mobLanguagePreference option:selected" ).val();
+                  }else {
+                    console.log($( "#languagePreference option:selected" ).val());
+                    var languagePreference = $( "#languagePreference option:selected" ).val();
+                  }
+
+                  var currentUrl = window.location.href;
+                  if(currentUrl.indexOf('security') < 0 && currentUrl.indexOf("ozEsYt") > -1){
+                    $.get('/lang/changeLang', {'lang': languagePreference}, function(result){
+                        try{
+                          clearInterval(hashInterval);
+                        }catch(e){}
+                        currentUrl = currentUrl.split('#')[0] + '#' + languagePreference;
+                        window.location.href = currentUrl;
+
+                        setTimeout(function(){
+                          window.location.reload();
+                        },100);
+                   });
+                  } else {
+                    <!--var url = new URL(currentUrl);-->
+                    <!--url.searchParams.set("lang", languagePreference); // setting your param-->
+                    <!--var newUrl = url.href;-->
+                    <!--window.location.href=newUrl;-->
+                     var newUrl=currentUrl.split("?")[0]+"?lang="+languagePreference
+                     window.location.href=newUrl
+
+                  }
+             }
+
+       function addOrUpdateUrlParam(name, value) {
+                   var href = window.location.href;
+          var regex = new RegExp("[&\\?]" + name + "=");
+          console.log("regex"+regex);
+          if(regex.test(href)) {
+          console.log("regex.test(href)"+regex.test(href));
+          regex = new RegExp("([&\\?])" + name + "=\\d+");
+          window.location.href = href.replace(regex, "$1" + name + "=" + value);
+          } else {
+          if(href.indexOf("?") > -1) {
+              window.location.href = href + "&" + name + "=" + value;
+          }else {
+              window.location.href = href.concat( "?").concat(name).concat( "=").concat(value);
+          }
+
+          console.log("window.location.href"+window.location.href);
+       }
+   }
+
+$(document).ready(function () {
+   var url=window.location.pathname;
+  if(url.indexOf("resWorkflow")==-1 && url.indexOf("bcWorkflow")==-1){
+  var dom='<a class="skip-hide" href="#" aria-hidden="true"></a><a class="skip-main" href="#main" onclick="location.href=\'#main\'" aria-hidden="true">Skip to main content</a>';
+   $("#header_container").before(dom)
+  }
+});
+</script>
+
+            <div class="clear"></div>
+          
+          
+            <div id="top_nav" class="large no-print">
+              <div id="top_nav_container">
+                <div class="multicolumn_row multicolumn_row_borderless">
+                  <div class="multicolumn_column top_logo_width">
+                    <div class="multicolumn_column_container">
+                      <a href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/html/acctSummary">
+                        <img role="img" alt="Mercury" src="images/logo/logo.png">
+                      </a>
+                      <div class="fit-logo" aria-hidden="true"></div>
+                      <div class="column_fill" aria-hidden="true">
+                      </div>
+                      <!-- End multicolumn_column_container -->
+                    </div>
+                    <!-- End multicolumn_column -->
+                  </div>
+                    <div class="multicolumn_column width_last top_nav_width" role="navigation">
+                      <div class="multicolumn_column_container">
+                        <ul id="top_nav_menu" class="">
+                            <li id="top_nav_menu_0">
+                              <a title="Account Summary" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/html/acctSummary" class="text-transform">Account Summary</a>
+                            </li>
+                             <li id="top_nav_menu_1" class="menu_button url_off not_full" expanded="false">
+                              <a title="Payment Options" role="menuitem"  class="menu_button_a text-transform" href="#" aria-haspopup="true" aria-expanded="false">Payment Options
+                               <svg class="td-icon expand" aria-hidden="true">
+                                 <use xlink:href="#icon-dropdown"></use>
+                               </svg>
+                               <svg class="td-icon collapse" aria-hidden="true">
+                                 <use xlink:href="#icon-ic-up"></use>
+                               </svg>
+                              </a>
+                              <div id="top_nav_targets_1" class="top_nav_target flyout" aria-hidden="true">
+                                <div class="article article_standard" role="menu">
+                                  <p><a role="menuitem" title="Make A Payment" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/payment">Make A Payment</a></p>
+                                  <p><a role="menuitem" title="Review Payment Offers" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/program">Review Payment Offers</a></p>
+                                  <p><a role="menuitem" title="Manage Payment Methods" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/payments/manageBankAccounts">Manage Payment Methods</a></p>
+                                    <p><a role="menuitem" title="Promise To Pay" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/exec/promise">Promise To Pay</a></p>
+                                </div>
+                              </div>
+                            </li>
+                            <li id="top_nav_menu_2">
+                              <a title="Update Contact Info" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/flow/contactFlow" class="text-transform">Update Contact Info</a>
+                            </li>
+
+                            <li id="top_nav_menu_3">
+                              <a title="Schedule Appointment" href="/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/appointment/list" class="text-transform">Schedule Appointment</a>
+                            </li>
+                        </ul>
+                        <div class="column_fill" aria-hidden="true">
+                        </div>
+                        <!-- End multicolumn_column_container -->
+                      </div>
+                      <!-- End multicolumn_column -->
+                    </div>
+                  <!-- End multicolumn_row -->
+                </div>
+              </div>
+            </div>
+            
+            <div class='clear'>
+            </div>
+            <!-- End header_container -->
+          </div>
+          <div class='clear'>
+          </div>
+          <!-- End header -->
+        </div>
+        <div id='main'>
+          <div id='main_container'>
+            <div id="main_top">
+              <div id="main_top_container">
+              
+        
+        <form action="?" id="contactForm" method="POST">
+        <input type="hidden" name="_flowExecutionKey" value="e6s3">
+        <input type="hidden" id="_tk" name="_tk" value="-nadpgCn74JcsqKLKZErkZMWwg6jnMhYa4Ghx93252w">
+        <input type="hidden" name="_X_SS_CSRFToken" value="9BAD66745270517F">
+                
+      
+                <div class="clear">&nbsp;</div>
+                <!--End main_top_container -->
+              </div>
+              <div class="clear">&nbsp;</div>
+              <!--End main_top-->
+            </div>
+            <div id="main_right_unit">
+              <div id="main_content_right_rail_unit">
+                <div id="main_content" class="no_right_rail">
+                  <div id="main_content_container">
+                    <div id="title_main_content" class="page_title">
+                      <h1 class="text-transform">Update Contact Information <span class="page-header-stuffix" aria-hidden="true">-1164</span></h1>
+                      <!-- End title_main_content -->
+                    </div>
+                    <div class="multicolumn_row multicolumn_row_standard">
+                      <div class="multicolumn_column width_100 width_last">
+                        <div class="multicolumn_column_container">
+                          <p class="h4 text_light">
+Please review the contact information that we have on file. Use this form to make any changes or corrections.</p>
+
+                          <div class="column_fill"></div>
+                          <!-- End multicolumn_column_container -->
+                        </div>
+                        <!-- End multicolumn_column -->
+                      </div>
+                      <div class="clear"></div>
+                      <!-- ECM0000 -->
+                      <!-- End multicolumn_row --></div>
+                    <div class="multicolumn_row multicolumn_row_standard">
+                      <div class="multicolumn_column width_50">
+                        <div class="multicolumn_column_container">
+                          <div class="article article_standard">
+                            <label><h2>Address</h2>&nbsp;</label>
+
+                            <div class="clear"></div>
+
+                            <label for="homeAddress.address.address1" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "address1_error"}'>Street Address Line 1:<span class="fa-asterisk text_red bg_callout_padding"></span></label>
+
+                            <p class="no_top_margin text_red" id="address1_error">
+        </p>
+                          
+        
+        <input type="text" id="homeAddress.address.address1" name="homeAddress.address.address1" value="1234 MAIN STREET" />
+      
+      
+                            <div class="clear"></div>
+
+                            <label for="homeAddress.address.address2" class="accessibility-input-by-label" item-meta='{"describedby": "address2_error"}'>Street Address Line 2:</label>
+
+                            <p class="no_top_margin text_red" id="address2_error">
+        </p>
+                          
+        
+        <input type="text" id="homeAddress.address.address2" name="homeAddress.address.address2" value="" />
+      
+      
+                            <div class="clear"></div>
+
+                            <label for="homeAddress.address.address3" class="accessibility-input-by-label" item-meta='{"describedby": "address3_error"}'>Street Address Line 3:</label>
+
+                            <p class="no_top_margin text_red" id="address3_error">
+        </p>
+                          
+        
+        <input type="text" id="homeAddress.address.address3" name="homeAddress.address.address3" value="" />
+      
+        
+                            <div class="clear"></div>
+
+                            <label for="homeAddress.address.address4" class="accessibility-input-by-label" item-meta='{"describedby": "address4_error"}'>Street Address Line 4:</label>
+
+                            <p class="no_top_margin text_red" id="address4_error">
+        </p>
+                          
+        
+        <input type="text" id="homeAddress.address.address4" name="homeAddress.address.address4" value="" />
+      
+      
+                            <div class="clear"></div>
+
+                              <label for="homeAddress.address.country" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "country_error"}'>Country:<span class="fa-asterisk text_red bg_callout_padding"></span></label>
+
+                              <p class="no_top_margin text_red" id="country_error">
+        </p>
+                          
+         <select  id="homeAddress.address.country" name="homeAddress.address.country"  onchange="displayState(this.value)" class="mobile-select-small" >
+                <option value="">Select...</option>
+                <option value="AF">Afghanistan</option>
+                <option value="AL">Albania</option>
+                <option value="DZ">Algeria</option>
+                <option value="AD">Andorra</option>
+                <option value="AO">Angola</option>
+                <option value="AI">Anguilla</option>
+                <option value="AG">Antigua and Barbuda</option>
+                <option value="AR">Argentina</option>
+                <option value="AM">Armenia</option>
+                <option value="AW">Aruba</option>
+                <option value="AU">Australia</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>
+                <option value="BD">Bangladesh</option>
+                <option value="BB">Barbados</option>
+                <option value="BY">Belarus</option>
+                <option value="BE">Belgium</option>
+                <option value="BZ">Belize</option>
+                <option value="BJ">Benin</option>
+                <option value="BM">Bermuda</option>
+                <option value="BT">Bhutan</option>
+                <option value="BO">Bolivia</option>
+                <option value="BA">Bosnia-Hercegovina</option>
+                <option value="BW">Botswana</option>
+                <option value="BR">Brazil</option>
+                <option value="IO">British Indian Ocean Terr</option>
+                <option value="VG">British Virgin Islands</option>
+                <option value="BN">Brunei Darussalam</option>
+                <option value="BG">Bulgaria</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="MM">Burma</option>
+                <option value="BI">Burundi</option>
+                <option value="CM">Cameroon</option>
+                <option value="CA">Canada</option>
+                <option value="CV">Cape Verde</option>
+                <option value="KY">Cayman Islands</option>
+                <option value="CF">Central African Republic</option>
+                <option value="TD">Chad</option>
+                <option value="CL">Chile</option>
+                <option value="CN">China</option>
+                <option value="CO">Colombia</option>
+                <option value="KM">Comoros</option>
+                <option value="CD">Congo</option>
+                <option value="CR">Costa Rica</option>
+                <option value="CI">Cote DIvoire</option>
+                <option value="HR">Croatia</option>
+                <option value="CU">Cuba</option>
+                <option value="CY">Cyprus</option>
+                <option value="CZ">Czech Republic</option>
+                <option value="DK">Denmark</option>
+                <option value="DJ">Djibouti</option>
+                <option value="DM">Dominica</option>
+                <option value="DO">Dominican Republic</option>
+                <option value="TL">East Timor</option>
+                <option value="EG">Egypt</option>
+                <option value="SV">El Salvador</option>
+                <option value="CQ">Equatorial Guinea</option>
+                <option value="ER">Eritrea</option>
+                <option value="EE">Estonia</option>
+                <option value="ET">Ethiopia</option>
+                <option value="FK">Falkland Islands</option>
+                <option value="FO">Faroe Islands</option>
+                <option value="FJ">Fiji</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="GF">French Guiana</option>
+                <option value="PF">French Polynesia</option>
+                <option value="GA">Gabon</option>
+                <option value="GM">Gambia</option>
+                <option value="DE">Germany</option>
+                <option value="GH">Ghana</option>
+                <option value="GI">Gibraltar</option>
+                <option value="GR">Greece</option>
+                <option value="GL">Greenland</option>
+                <option value="GD">Grenada</option>
+                <option value="GT">Guatemala</option>
+                <option value="GN">Guinea</option>
+                <option value="GW">Guinea-Bissau</option>
+                <option value="GY">Guyana</option>
+                <option value="HT">Haiti</option>
+                <option value="HN">Honduras</option>
+                <option value="HK">Hong Kong</option>
+                <option value="HU">Hungary</option>
+                <option value="IS">Iceland</option>
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>
+                <option value="IR">Iran</option>
+                <option value="IQ">Iraq</option>
+                <option value="IE">Ireland</option>
+                <option value="IL">Israel</option>
+                <option value="IT">Italy</option>
+                <option value="JM">Jamaica</option>
+                <option value="JP">Japan</option>
+                <option value="JO">Jordan</option>
+                <option value="KH">Kampuchea</option>
+                <option value="KZ">Kazakhstan</option>
+                <option value="KE">Kenya</option>
+                <option value="KI">Kiribati</option>
+                <option value="KW">Kuwait</option>
+                <option value="KG">Kyrgyzstan</option>
+                <option value="LA">Laos</option>
+                <option value="LV">Latvia</option>
+                <option value="LB">Lebanon</option>
+                <option value="LS">Lesotho</option>
+                <option value="LR">Liberia</option>
+                <option value="LY">Libya</option>
+                <option value="LI">Liechtenstein</option>
+                <option value="LT">Lithuania</option>
+                <option value="LU">Luxembourg</option>
+                <option value="MO">Macao</option>
+                <option value="MK">Macedonia</option>
+                <option value="MG">Madagascar</option>
+                <option value="MW">Malawi</option>
+                <option value="MY">Malaysia</option>
+                <option value="MV">Maldives</option>
+                <option value="ML">Mali</option>
+                <option value="MT">Malta</option>
+                <option value="MQ">Martinique</option>
+                <option value="MR">Mauritania</option>
+                <option value="MU">Mauritius</option>
+                <option value="MX">Mexico</option>
+                <option value="MD">Moldova</option>
+                <option value="MN">Mongolia</option>
+                <option value="ME">Montenegro</option>
+                <option value="MS">Montserrat</option>
+                <option value="MA">Morocco</option>
+                <option value="MZ">Mozambique</option>
+                <option value="NA">Namibia</option>
+                <option value="NR">Nauru</option>
+                <option value="NP">Nepal</option>
+                <option value="NL">Netherlands</option>
+                <option value="AN">Netherlands Antilles</option>
+                <option value="NC">New Caledonia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NI">Nicaragua</option>
+                <option value="NE">Niger</option>
+                <option value="NG">Nigeria</option>
+                <option value="KP">North Korea</option>
+                <option value="NO">Norway</option>
+                <option value="OM">Oman</option>
+                <option value="PK">Pakistan</option>
+                <option value="PA">Panama</option>
+                <option value="PG">Papua New Guinea</option>
+                <option value="PY">Paraguay</option>
+                <option value="PE">Peru</option>
+                <option value="PH">Philippines</option>
+                <option value="PN">Pitcairn Island</option>
+                <option value="PL">Poland</option>
+                <option value="PT">Portugal</option>
+                <option value="QA">Qatar</option>
+                <option value="GE">Republic of Georgia</option>
+                <option value="RE">Reunion Island</option>
+                <option value="RO">Romania</option>
+                <option value="RU">Russia</option>
+                <option value="RW">Rwanda</option>
+                <option value="ST">Sao Tome and Principe</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="SN">Senegal</option>
+                <option value="RS">Serbia</option>
+                <option value="SC">Seychelles</option>
+                <option value="SL">Sierra Leone</option>
+                <option value="SG">Singapore</option>
+                <option value="SK">Slovak Republic</option>
+                <option value="SI">Slovenia</option>
+                <option value="SB">Solomon Islands</option>
+                <option value="SO">Somalia</option>
+                <option value="ZA">South Africa</option>
+                <option value="KR">South Korea</option>
+                <option value="ES">Spain</option>
+                <option value="LK">Sri Lanka</option>
+                <option value="KN">Saint Kitts and Nevis</option>
+                <option value="SH">St Helena</option>
+                <option value="LC">St Lucia</option>
+                <option value="PM">St Pierre and Miquelon</option>
+                <option value="VC">St Vincent and Grenadines</option>
+                <option value="SD">Sudan</option>
+                <option value="SR">Suriname</option>
+                <option value="SZ">Swaziland</option>
+                <option value="SW">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="SY">Syria</option>
+                <option value="TW">Taiwan</option>
+                <option value="TJ">Tajikistan</option>
+                <option value="TZ">Tanzania</option>
+                <option value="TH">Thailand</option>
+                <option value="TG">Togo</option>
+                <option value="TK">Tokelau</option>
+                <option value="TO">Tonga</option>
+                <option value="TT">Trinidad and Tobago</option>
+                <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                <option value="TN">Tunisia</option>
+                <option value="TR">Turkey</option>
+                <option value="TM">Turkmenistan</option>
+                <option value="TC">Turks and Caicos Islands</option>
+                <option value="TV">Tuvalu</option>
+                <option value="UG">Uganda</option>
+                <option value="UA">Ukraine</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="GB">United Kingdom</option>
+                <option selected="selected" value="US">United States</option>
+                <option value="UY">Uruguay</option>
+                <option value="UZ">Uzbekistan</option>
+                <option value="VU">Vanuatu</option>
+                <option value="VA">Vatican City</option>
+                <option value="VE">Venezuela</option>
+                <option value="VN">Vietnam</option>
+                <option value="VG">Virgin Islands (British)</option>
+                <option value="VI ">Virgin Islands (U.S.)</option>
+                <option value="WF">Wallis and Futuna Islands</option>
+                <option value="WS">Western Samoa</option>
+                <option value="YE">Yemen</option>
+                <option value="CG">Zaire</option>
+                <option value="ZM">Zambia</option>
+                <option value="ZW">Zimbabwe</option>
+      </select>
+      
+      
+                              <div class="clear"></div>
+
+                              <label for="homeAddress.address.province" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "province_error"}'>Province/State:
+                                  <span class="fa-asterisk text_red bg_callout_padding"></span>
+                              </label>
+
+                              <p class="no_top_margin text_red" id="province_error">
+        </p>
+                              
+         <select  id="homeAddress.address.province" name="homeAddress.address.province" class="mobile-select-small">
+                <option value="">Select...</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AS">American Samoa</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FM">Federated States Of Micronesia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="GU">Guam</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MH">Marshall Islands</option>
+                <option value="Md">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="PW">Palau</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TT">Trust Territories</option>
+                <option selected="selected" value="TX">Texas</option>
+                <option value="UM">U.S. Minor Outlying Islands</option>
+                <option value="UT">Utah</option>
+                <option value="VA">Virginia</option>
+                <option value="VI">Virgin Islands of the U.S.</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WV">West Virginia</option>
+                <option value="WY">Wyoming</option>
+      </select>
+      
+                              <div class="clear"></div>
+
+                              
+
+                            <label for="homeAddress.address.city" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "city_error"}'>City:<span class="fa-asterisk text_red bg_callout_padding"></span></label>
+
+                            <p class="no_top_margin text_red" id="city_error">
+        </p>
+                          
+        
+        <input type="text" id="homeAddress.address.city" name="homeAddress.address.city" value="LEANDER" />
+      
+
+      
+                            <div class="clear"></div>
+
+                            <label for="homeAddress.address.postalCode" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "postalCode_error"}'>Postal Code/Zip Code:<span class="fa-asterisk text_red bg_callout_padding"></span></label>
+
+                            <p class="no_top_margin text_red" id="postalCode_error">
+        </p>
+                          
+        
+        <input type="text" id="homeAddress.address.postalCode" name="homeAddress.address.postalCode" value="78645" />
+      
+        
+                            <div class="clear"></div>
+
+                          </div>
+                          <div class="column_fill"></div>
+                          <!-- End multicolumn_column_container --></div>
+                        <!-- End multicolumn_column --></div>
+                      <div class="multicolumn_column width_50 width_last">
+                        <div class="multicolumn_column_container">
+                          <div class="article article_standard">
+                            <label><h2>Phone and Email</h2>
+                              <span class="phone_text"> (Phone number format: xxxxxxxxxx)
+                            </label>
+
+                            <div class="clear"></div>
+
+                            <label for="homePhonePhoneNum" class="accessibility-input-by-label" item-meta='{"required": "true", "describedby": "homePhonePhoneNum_error"}'>Home Phone:<span class="fa-asterisk text_red bg_callout_padding"></span></label>
+
+                            <p class="no_top_margin text_red" id="homePhonePhoneNum_error">
+                          Home phone number is required.                    
+</p>
+                          
+        
+          <input type="hidden" id="homePhoneCountryCodeHidden" name="homePhone.countryCode" value="g.contactCommand.homePhone.countryCode"/>
+        
+      
+                          
+        
+
+        
+                          
+        
+        <input type="text" id="homePhonePhoneNum" name="homePhone.phoneNum" value="" onkeypress="return isIntegerKey(event)" class="dd_input_tel"/>
+      
+      
+                            <div class="clear"></div>
+
+                            <label for="workPhonePhoneNum" class="accessibility-input-by-label" item-meta='{"describedby": "workPhonePhoneNum_error"}'>Work Phone:</label>
+
+                            <p class="no_top_margin text_red" id="workPhonePhoneNum_error">
+        </p>
+                          
+        
+              <input type="hidden" id="workPhoneCountryCodeHidden" name="workPhone.countryCode" value="g.contactCommand.workPhone.countryCode"/>
+      
+      
+                          
+        
+        
+                          
+        
+          <input type="text" id="workPhonePhoneNum" name="workPhone.phoneNum" value="" onkeypress="return isIntegerKey(event)" class="dd_input_tel"/>
+      
+
+      
+                            <div class="clear"></div>
+
+                            <label for="mobilePhonePhoneNum" class="accessibility-input-by-label" item-meta='{"describedby": "mobilePhonePhoneNum_error"}'>Mobile Phone:</label>
+
+                            <p class="no_top_margin text_red" id="mobilePhonePhoneNum_error">
+        </p>
+                          
+        
+        <input type="hidden" id="mobilePhoneCountryCodeHidden" name="mobilePhone.countryCode" value="g.contactCommand.mobilePhone.countryCode"/>
+
+      
+      
+                          
+        
+
+        
+                          
+        
+          <input type="text" id="mobilePhonePhoneNum" name="mobilePhone.phoneNum" value="8327777778" onkeypress="return isIntegerKey(event)" class="dd_input_tel"/>
+      
+      
+                            <div class="clear"></div>
+
+                            <label for="otherPhonePhoneNum" class="accessibility-input-by-label" item-meta='{"describedby": "otherPhonePhoneNum_error"}'>Other Phone:</label>
+
+                            <p class="no_top_margin text_red" id="otherPhonePhoneNum_error">
+        </p>
+                          
+        
+        <input type="hidden" id="otherPhoneCountryCodeHidden" name="otherPhone.countryCode" value="g.contactCommand.otherPhone.countryCode"/>
+
+      
+      
+                          
+        
+
+        
+                          
+        
+          <input type="text" id="otherPhonePhoneNum" name="otherPhone.phoneNum" value="" onkeypress="return isIntegerKey(event)" class="dd_input_tel"/>
+      
+      
+                            <div class="clear"></div>
+
+                            <label for="homeEmailEmailAddress" class="accessibility-input-by-label" item-meta='{"describedby": "homeEmailEmailAddress_error"}'>Home Email:</label>
+
+                            <p class="no_top_margin text_red" id="homeEmailEmailAddress_error">
+        </p>
+                          
+        
+          <input type="text" id="homeEmailEmailAddress" name="homeEmail.emailAddress" value="PERF_890004557@CS.COM" />
+      
+
+      
+                            <div class="clear"></div>
+
+                          </div>
+                          <div class="column_fill"></div>
+                          <!-- End multicolumn_column_container -->
+                        </div>
+                        <!-- End multicolumn_column -->
+                      </div>
+                      <div class="clear"></div>
+                      <!-- ECM0000 -->
+                      <!-- End multicolumn_row -->
+                    </div>
+                   
+                    <div class="multicolumn_row multicolumn_row_standard">
+                      <div class="multicolumn_column width_100 width_last">
+                        <div class="multicolumn_column_container">
+
+                          <div class="column_fill"></div>
+                          <!-- End multicolumn_column_container -->
+                        </div>
+                        <!-- End multicolumn_column -->
+                      </div>
+                      <div class="clear"></div>
+                      <!-- ECM0000 -->
+                      <!-- End multicolumn_row -->
+                    </div>
+
+                            <div class="multicolumn_row multicolumn_row_standard">
+                              <div class="multicolumn_column width_100 width_last">
+                                <div class="multicolumn_column_container">
+                                  <p>
+                                    <input type="submit" name="_eventId_confirm" value="Continue" id="continueBtn"
+                                           class="vertical button_standard bg_blue input_submit inline offset-r10 btn btn-primary"/>
+                                    <input type="submit" name="_eventId_cancel" value="Cancel"
+                                           class="vertical button_standard bg_blue input_submit inline btn btn-default"/>
+                                  </p>
+
+                                  <div class="column_fill"></div>
+                                  <!-- End multicolumn_column_container -->
+                                </div>
+                                <!-- End multicolumn_column -->
+                              </div>
+                             <div class="clear"></div>
+                          <!-- ECM0000 -->
+                          <!-- End multicolumn_row -->
+                        </div>
+                  </form>
+                    <div class="clear">&nbsp;</div>
+                    <!--End main_content_container --></div>
+                  <div class="clear">&nbsp;</div>
+                  <!--End main_content --></div>
+                <!-- End main_content_right_rail_unit -->
+              </div>
+              <div class="clear"></div>
+              <!-- End main_right_unit -->
+            </div>
+
+            <div class='clear'></div>
+            <!-- End main_container -->
+          </div>
+          <div class='clear'></div>
+          <!-- End main -->
+        </div>
+        <div class='clear'></div>
+        <!-- End content_container -->
+      </div>
+    
+      <div id="footer" class="no-print">
+        <div id="footer_top_border">
+          <!-- End footer_top_border -->
+        </div>
+        <div id="footer_container">
+          <div class="article article_standard">
+            <p>
+              <span>
+                <a href="/doc/termsConditions" target="_blank" rel="noopener">Terms and Conditions</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/securityPolicy" target="_blank" rel="noopener">Security Policy</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/privacyPolicy" target="_blank" rel="noopener">Privacy Policy</a>
+                &nbsp;&nbsp;|&nbsp;
+                <a href="/doc/contactUs" target="_blank" rel="noopener">Contact Us</a>
+              </span>
+            </p>
+            <p>
+<!--              <span class="copyright">-->
+<!--                  Copyright &copy; 2018-->
+<!--                  <a id="usb" href="http://www.cmcagile.com" target="cmcuscorp">Mercury</a>-->
+<!--              </span>-->
+              <div class="right" aria-describedby="callUsOne">
+                <span id="callUsOne" class="table-row">Call Us: 1-302-830-9262</span>
+                <span id="callUsTwo" class="table-row right"></span>
+              </div>
+            </p>
+            <p></p>
+            <!-- End article -->
+          </div>
+          <div class="clear"></div>
+          <!-- End footer_container" -->
+        </div>
+        <div class="clear">
+        </div>
+        <!-- End footer -->
+      </div>
+            
+      <div class='clear'>
+      </div>
+      <!-- End content -->
+    </div>
+    <!-- End page_center_container -->
+  </div>
+  <!-- End page_center -->
+</div>
+
+       <style>
+                .highlight{
+                    font-weight: bold;
+                    color: blue;
+                }
+                .no-close .ui-dialog-titlebar-close {
+                  display: none;
+                }
+                .no-title-bar .ui-dialog-titlebar {
+                    display: none;
+                }
+                .center-alignment{
+                    text-align: center;
+                }
+       </style>
+
+<div id="popupWinModel" class="modal large" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                onclick="cancelPopupWin()"></button>
+        <h4>&nbsp;</h4>
+    </div>
+    <div class="modal-body" style="height: 600px;">
+        <iframe id="popupWinFrame" name="popupWinFrame" style="width:800px;height:600px;"></iframe>
+    </div>
+</div>
+            
+<div id="_defaultDialog" class="modal" tabindex="-1" role="dialog"
+     aria-labelledby="dialog" aria-hidden="true">
+    <div class="modal-header">
+        <button name="close" type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 name="title">{title}</h4>
+    </div>
+    <div class="modal-body" name="body">
+        {body}
+    </div>
+</div>
+
+<div class="modal-backdrop fade"></div>
+<div id="timeoutCutDownWin" class="modal" tabindex="-1" role="dialog" aria-modal="true" item-focus="timeoutCutDownWin_keep_session_btn">
+    <div class="modal-header">
+        <h3>Session Timeout</h3>
+    </div>
+    <div class="modal-body">
+        <p>Due to lack of activity, this session will be logged out in 2 minutes.
+            <br>
+        </p>
+
+        <div class="highlight text-center">
+            <span class="color-error" id="sessionTimeoutLeftSeconds">120</span> second(s) left ...
+        </div>
+        <br>
+
+        <div class="text-center">
+            <button id="timeoutCutDownWin_keep_session_btn"  class="btn-blue btn-minwidth" onclick="activeSession();">Keep Session Active</button>
+        </div>
+        <p></p>
+    </div>
+</div>
+
+<div id="logoutWin" title="We'd welcome your feedback!" style="display:none" role="dialog" aria-modal="true" item-focus="btn_1_logout_btn">
+    <p><span class="screen-reader-text">We'd welcome your feedback!. </span>Thank you for visiting our website. You have been selected to participate in a brief customer satisfaction survey to let us know how we can improve your experience.</p>
+    <div class="highlight">
+        <p>The Survey is designed to measure your website experience you have had today and will only take a few minutes of your time.</p>
+    </div>
+    <br/>
+    <div class="center-alignment">
+        <button id="btn_1_logout_btn" class="button_standard bg_blue" onclick="window.location.href = '/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/tryLogoutPage';">Yes,I'll give feedback</button>
+        <button class="button_standard bg_blue" onclick="window.location.href = '/security/logout'">No,thanks</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function showModalMask(modalDivId) {
+        jQuery(".modal-backdrop").show();
+    }
+
+    function openSessionTimeOutWin(modalDivId, width, height) {
+      var options = {
+        dialogClass: "no-close no-title-bar"
+      };
+
+      if(width){
+        options['width'] = width;
+      }
+      if(height) {
+        options['height'] = height;
+      }
+
+      openDialog(modalDivId, options);
+    }
+
+    function openDialog(modalDivId, options, platform) {
+        var _modal = $("#" + modalDivId),
+            _auto_focus_target_id = _modal.attr('item-focus'),
+            _auto_focus_field = _auto_focus_target_id? $('#'+_auto_focus_target_id) : null;
+
+        var opts = {
+                dialogClass: "no-close",
+                modal: true,
+                width: (platform && 'mobile' == platform)? '99%': 450,
+                height: 320,
+                open: function(){
+                  if(_auto_focus_field && _auto_focus_field.length > 0){
+                      _auto_focus_field.focus();
+                  }
+                }
+        };
+
+        if(options){
+          opts = $.extend(opts, options);
+        }
+
+        _modal.dialog(opts);
+    }
+
+    function closeSessionTimeOutWin(modalDivId) {
+      $("#" + modalDivId).dialog('close');
+    }
+
+    var sessionCutDownTimes = 120;
+
+    var timeOutId = null;
+    function cutDownSessionTimeout() {
+        clearTimeout(timeOutId);
+        if (sessionCutDownTimes == 0) {
+            window.location.href="/security/logout";
+        } else {
+            sessionCutDownTimes--;
+            jQuery("#sessionTimeoutLeftSeconds").html(sessionCutDownTimes);
+            timeOutId = setTimeout(cutDownSessionTimeout, 1000);
+        }
+    }
+
+    function activeSession() {
+        jQuery.ajax({
+            url: "/ping",
+            success: function (data, textStatus, xhr) {
+                var sessionTimeoutFlag = xhr.getResponseHeader("SessionTimeout")
+                if ("Y" == sessionTimeoutFlag)
+                    window.location.href="/security/login";
+                else{
+                    closeSessionTimeOutWin("timeoutCutDownWin");
+                    clearTimeout(timeOutId);
+                    $("#languagePreference").focus();
+                    $("#mobLanguagePreference").focus();
+
+
+                }
+            }
+        });
+    }
+
+    function sessionTimeoutWarning() {
+        openSessionTimeOutWin("timeoutCutDownWin", 400, 250);
+        timeOutId = setTimeout(cutDownSessionTimeout, 1000);
+    }
+    
+    function openPopupWin(uri){
+        if(uri){
+            window.frames["popupWinFrame"].location.href = uri;
+            openSessionTimeOutWin("popupWinModel", 800, 600);
+        }
+    }
+    
+    function cancelPopupWin(){
+        closeSessionTimeOutWin("popupWinModel");
+        return false;
+    }
+    
+    function checkLogoffWorkflow(platform){
+      if(platform && 'mobile' == platform){
+        // collapse the menu
+        mobile_menu('mobile_nav_flyout_left');
+      }
+      jQuery.ajax({
+        async:true,
+        url:"/r_key_ozEsYt=XeapOpJhN3seJVWv0fQYLg%3D%3D/workflow/checkLogoffWorkflow?ozEsYt=3M5H4gVElY9P1R29DuX4Dg%3D%3D",
+        cache:false,
+        type:"POST",
+        success:function (data) {
+          if(data && "true" == data){
+            openDialog('logoutWin', null, platform);
+          }else{
+            window.location = "/security/logout";
+          }
+        }
+      });
+      return false;
+    }
+
+    jQuery(document).ready(function () {
+        var sessionTimeOutDiv = $('div[id=timeoutCutDownWin]');
+        if(sessionTimeOutDiv.length > 1){
+            $(sessionTimeOutDiv[0]).remove();
+        }
+
+        setTimeout(sessionTimeoutWarning, 1080*1000);
+    });
+</script>
+            
+
+<script src="js/global_js/global_framework_1.js" type="text/javascript"
+        language="javascript"></script>
+<script language="javascript" type="text/javascript"
+        src="js/katabat_js/core/katabat_core_1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="js/loan_servicing_js/loan_servicing_1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="js/loan_servicing_js/jquery-ui.min-1.12.1.js"></script>
+<script type="text/javascript" language="javascript"
+        src="/.theme/js/loan_servicing_js/datepicker-fr.js"></script>
+<script type="text/javascript" language="javascript" src="/.theme/scripts/screen-reader.min.js"></script>
+ <script type="text/javascript" language="javascript" src="/.theme/scripts/common.js"></script>
+ <script language="javascript" type="text/javascript"
+        src="js/select2.min.js"></script>
+  <script language="javascript" type="text/javascript"
+        src="js/iconfont.js"></script>
+
+            
+<script type="text/javascript" src="scripts/jquery.dd.min.js"></script>
+<script type="text/javascript" src="scripts/commonJS.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#continueBtn').click(function(){
+      $("#homePhoneCountryCodeHidden").val($("#homePhoneCountryCode").val());
+      $("#workPhoneCountryCodeHidden").val($("#workPhoneCountryCode").val());
+      $("#mobilePhoneCountryCodeHidden").val($("#mobilePhoneCountryCode").val());
+      $("#otherPhoneCountryCodeHidden").val($("#otherPhoneCountryCode").val());
+    });
+  });
+    
+</script>
+
+
+
+<script type="text/javascript">
+
+    var date_months = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+    var date_days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    var _form_validation = {
+        errorDisplayPrefix: "form_error_",
+        attr: {
+            errorPrefix: 'error_',
+            required: 'required',
+            fieldType: 'fieldtype',
+            fieldName: 'fieldname',
+            maxValue: 'maxvalue',
+            minValue: 'minvalue',
+            dateFormat: 'dateformat',
+            regExpr: 'regexpr'
+        },
+        availableFieldType: {
+            numeric: 'numeric',
+            date: 'date',
+            radio: 'radio'
+        },
+        fieldTypeReg: {
+            numeric: /^\d+(\.\d+)?$/
+        }
+    };
+
+    var defaultRegional = "en";
+    if( ( typeof languagePreference != "undefined" ) && (languagePreference.value == "fr_FR")) {
+        defaultRegional = "fr";
+    }
+
+    function jquery_ui_datepicker_accessibility_fixed(ins){
+        $('#ui-datepicker-div').attr('role', 'application');
+        $('td.ui-state-disabled').attr('aria-hidden', true);
+        $('.ui-datepicker-month > option').map(function(){
+            var _field = $(this),
+                _val = parseInt(_field.val());
+            _field.attr('aria-label', date_months[_val])
+        });
+
+        $('.ui-datepicker-calendar  a').map(function(){
+            var _field = $(this),
+                _td = _field.parent(),
+                _data_year = _td.attr('data-year'),
+                _data_month = _td.attr('data-month'),
+                _data_day = _field.text(),
+                _cell_index = _td.index(),
+                _day_of_week = date_days[_cell_index];
+
+            var message = _day_of_week + ', ' + date_months[_data_month] + ' ' + _data_day + ', ' + _data_year;
+            // _td.attr('aria-label', message);
+            _field.attr('role', 'button');
+            _field.attr('aria-label', message);
+        });
+
+        var _day_of_today = new Date().getDate();
+        var _focus_selected_field = $('.ui-datepicker-current-day a')[0];
+        var focus_field = _focus_selected_field? _focus_selected_field: $('.ui-datepicker-calendar a:contains('+_day_of_today+')');
+
+        // assertive
+        $(focus_field).parent().attr('aria-live', 'polite')
+            .attr('aria-atomic', true)
+            .attr('id', 'ui-datepicker-0-selected')
+            .attr('aria-selected', true);
+        $(focus_field).closest('table').attr('aria-activedescendant', 'ui-datepicker-0-selected')
+                                       .attr('aria-readonly', true);
+        // $(ins.input).attr('aria-owns', $(focus_field).closest('table').parent().attr('id'));
+    }
+
+    function initDateFields() {
+//        console.log('initDateFields');
+        var dateFields = jQuery("input[" + _form_validation.attr.fieldType + "='"
+                                + _form_validation.availableFieldType.date + "']");
+        for (var i = 0; i < dateFields.length; i++) {
+            var field = jQuery(dateFields[i]);
+            var availableDays = field.attr("availableDays") ?
+                                field.attr("availableDays").split(";") : null;
+            var dateFormat = field.attr('dateformat');
+            var dateTrigger = field.attr('dateTrigger');
+            if (!dateTrigger){
+               dateTrigger = 'button'
+            }
+//            console.log('dateFormat', dateFormat);
+            if (dateFormat) {
+//                console.log('dateFormat 2', dateFormat);
+                dateFormat = dateFormat.replace("yyyy", 'yy');
+                dateFormat = dateFormat.replace("MM", 'mm');
+                field.attr('dateformat', dateFormat);
+            }
+
+            var config = {
+                dateFormat: dateFormat || "yy-mm-dd",
+                maxDate:    field.attr("maxvalue") || null,
+                minDate:    field.attr("minvalue") || null,
+                yearRange:  field.attr("yearRange") || "c-10:c+10",
+                buttonImage: 'images/cal-icon32.png',
+                buttonImageOnly: false,
+                autoSize: true,
+                showOn: dateTrigger,
+                onGenerate: function (ct) {
+                  jQuery(this).find('.xdsoft_date').toggleClass('xdsoft_disabled');
+                },
+                buttonText : field.attr("buttonText") || 'Calendar, Click or press the Enter key to open the calendar',
+                showButtonPanel: true,
+                changeYear: true,
+                changeMonth: true,
+                regional: field.attr("regional") || defaultRegional,
+                beforeShowDay: function (date) {
+                    if (!availableDays) {
+                        return [true, ""];
+                    }
+
+                    var dmy = jQuery.datepicker.formatDate(dateFormat, date);
+                    if (jQuery.inArray(dmy, availableDays) != -1) {
+                        return [true, ""];
+                    } else {
+                        return [false, ""];
+                    }
+                },
+                beforeShow: function (input, ins) {
+                    setTimeout(function () {
+                        jquery_ui_datepicker_accessibility_fixed(ins);
+                    } ,0);
+
+                    setTimeout(function () {
+                     jQuery('button.ui-datepicker-current').css('opacity',1).css('font-weight','bold');
+
+                     var _day_of_today = new Date().getDate();
+                     var _focus_selected_field = $('.ui-datepicker-current-day a')[0];
+                     var focus_field = _focus_selected_field? $(_focus_selected_field): $('.ui-datepicker-calendar a:contains('+_day_of_today+')');
+                     if(focus_field && focus_field.length > 0){
+                         if(config.showOn == 'focus'){
+                             setTimeout(function () {
+                                 $(focus_field).focus();
+                             }, 100);
+                         } else {
+                             setTimeout(function () {
+                                 focus_field.focus();
+                             }, 100);
+                         }
+                     } else {
+                         // not find the focus field
+                         // by default will focus the first of the enabled day
+                         setTimeout(function () {
+                             focus_field = $($('.ui-datepicker-calendar tbody tr td[data-handler=selectDay] a')[0]);
+                             focus_field.focus();
+                         }, 100);
+                     }
+
+                     let  _isSafari = navigator.userAgent.indexOf('Safari') > -1;
+                     let  _isChrome = navigator.userAgent.indexOf('Chrome') > -1;
+                     var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(navigator.userAgent);
+
+                     if (_isSafari && !_isChrome) {
+                         if(!isMobileDevice){
+                             setTimeout(function () {
+                                 $("select.ui-datepicker-month,select.ui-datepicker-year").select2({
+                                     minimumResultsForSearch: Infinity
+                                 });
+                             }, 1);
+                         }
+
+                       goToNextWithTabOnSafari();
+
+                       setTimeout(function () {
+                         let _datepicker_year = jQuery('.ui-datepicker-title').children()[3];
+                         let _datepicker_month = jQuery('.ui-datepicker-title').children()[1];
+                         if(isMobileDevice){
+                             _datepicker_year = $('div.ui-datepicker-title .ui-datepicker-year');
+                             _datepicker_month = $('div.ui-datepicker-title .ui-datepicker-month');
+                         }
+                         $(_datepicker_year).keydown(function(e) {
+                           if (e.keyCode == 9) {
+                             if (e.shiftKey && e.altKey) {
+                               setTimeout(function () {
+                                 if ($(_datepicker_year).is(":focus")) {
+                                   jQuery(_datepicker_month).focus();
+                                 }
+                               }, 1);
+                             } else {
+                               let focus_field_new = $('.ui-datepicker-calendar  a')[0];
+                               setTimeout(function () {
+                                 if ($(focus_field_new) && $(focus_field_new).size() > 0) {
+                                   $(focus_field_new).focus();
+                                 } else {
+                                   jQuery('button.ui-datepicker-current').focus();
+                                 }
+                               }, 1);
+                             }
+                           }
+                         });
+                       }, 30)
+                     }
+                     // jQuery('.ui-datepicker-month').focus();
+                     jQuery('button.ui-datepicker-close').keydown(function() {
+                       if (event.keyCode == 9) {
+                         ins.input.focus();
+                         jQuery('#ui-datepicker-div').css('display', 'none');
+                       }
+                     });
+
+                     $('#ui-datepicker-div').keydown(function() {
+                       if (event.keyCode == 27) {
+                         ins.input.focus();
+                         jQuery('#ui-datepicker-div').css('display', 'none');
+                       }
+                     });
+                    }, 1);
+
+                    $(input).keydown(function () {
+                      if (event.keyCode == 9 && event.shiftKey && event.altKey) {
+                        setTimeout(function () {
+                          jQuery.datepicker._hideDatepicker(input);
+                          goToPre(ins);
+                          }, 1);
+                      }
+                    });
+                },
+              onClose: function(date, instance) {
+                instance.input.blur();
+                goToNext(instance);
+              },
+              onChangeMonthYear: function (year, month, instance) {
+                  setTimeout(function(){
+                      jquery_ui_datepicker_accessibility_fixed(instance);
+                  }, 0);
+                let  _isSafari = navigator.userAgent.indexOf('Safari') > -1;
+                let  _isChrome = navigator.userAgent.indexOf('Chrome') > -1;
+                var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(navigator.userAgent);
+
+                if (jQuery('.ui-datepicker-month').is(":focus") || jQuery('.ui-datepicker-year').is(":focus") ) {
+                  setTimeout(function () {
+                    jQuery('button.ui-datepicker-current').css('opacity', 1).css('font-weight', 'bold');
+                    jQuery('.ui-datepicker-month').focus();
+                  }, 1);
+                } else if (_isSafari && !_isChrome)  {
+                  setTimeout(function () {
+                    if(!isMobileDevice){
+                      $("select.ui-datepicker-month,select.ui-datepicker-year").select2({
+                          minimumResultsForSearch: Infinity
+                      });
+                    }
+
+                    goToNextWithTabOnSafari();
+
+                    let focus_field_new = $('.ui-datepicker-calendar  a')[0];
+
+                    if ($(focus_field_new) && $(focus_field_new).size() > 0) {
+                      $(focus_field_new).focus();
+                    } else {
+                      jQuery('button.ui-datepicker-current').focus();
+                    }
+                  }, 10);
+                } else {
+                  instance.input.focus();
+                  instance.input.blur();
+                  goToNext(instance);
+                }
+              }
+//              ,
+//                onChangeMonthYear: function (year, month, instance) {
+//                    setTimeout(function () {
+//                        var buttonPane = jQuery(instance)
+//                                .datepicker("widget")
+//                                .find(".ui-datepicker-buttonpane");
+//
+//                        jQuery("<button>", {
+//                            text: "Clear",
+//                            click: function () {
+//                                //Code to clear your date field (text box, read only field etc.) I had to remove the line below and add custom code here
+//                                jQuery.datepicker._clearDate(instance.input);
+//                            }
+//                        }).appendTo(buttonPane).addClass("ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all");
+//                    }, 1);
+//                }
+            };
+            $.datepicker.regional[ config.regional ].dateFormat=dateFormat;
+            field.datepicker(config);
+            field.datepicker( "option",$.datepicker.regional[ config.regional ] );
+        }
+        /**
+         * override datepicker _gotoToday function
+         */
+        if(dateFields.length > 0 && jQuery.datepicker) {
+          var original_gotoToday = jQuery.datepicker._gotoToday;
+          jQuery.datepicker._gotoToday = function (id) {
+            var target = jQuery(id), inst = this._getInst(target[0]);
+            original_gotoToday.call(this, id);
+            this._selectDate(id, this._formatDate(inst, inst.selectedDay, inst.drawMonth, inst.drawYear));
+            inst.input.blur();
+            goToNext(inst);
+          }
+        }
+    }
+
+    function goToNext(instance) {
+        var inputs = $('#main_container :input[type!=hidden]'),isFind=false;
+        inputs.each(function(index,element){
+            var _field = $(this),
+                _dateTrigger = _field.attr('dateTrigger'),
+                nexEl = undefined;
+
+            if ($(this).attr("id") == instance.id) {
+                nexEl = _dateTrigger && _dateTrigger !== 'button' ? inputs[index +1]: inputs[index +2];
+                isFind = true;
+            }
+
+            if (isFind && nexEl) {
+                nexEl.focus();
+                isFind = false;
+            }
+        });
+
+        if (navigator.userAgent.indexOf("Trident") != -1) {
+            jQuery('#ui-datepicker-div').css('display', 'none');
+        }
+    }
+
+    function goToPre(instance) {
+      var inputs = $('#main_container :input'),isFind=false, canToTop=true, canS=false;
+      let l = 1;
+      inputs.each(function(index,element){
+        if (isFind) {
+          l = l + 2;
+        }
+        var nexEl = inputs[index-l];
+
+        if ($(this).attr("id") == instance.id) {
+          isFind = true;
+          canS = true;
+        }
+
+        if (isFind && ($(nexEl).attr('type') != 'hidden')) {
+          setTimeout(function () {
+            $(nexEl).focus();
+          }, 150);
+
+          isFind = false;
+          l =1;
+        }
+
+        if (canS && $(nexEl).attr('type') != 'hidden') {
+          canToTop = false;
+        }
+      });
+
+      if (canToTop) {
+        let allLi = $('#top_nav_container li');
+
+        $(allLi[allLi.size()-1]).children()[0].focus();
+      }
+    }
+
+    function goToNextWithTabOnSafari() {
+      $('.ui-datepicker-calendar a').map(function(ind){
+        let _focus_field = $(this);
+        _focus_field.keydown(function () {
+          if (event.keyCode == 9) {
+            let index = (event.shiftKey && event.altKey) ? ind - 1 : ind + 1;
+            let focus_field_new = $('.ui-datepicker-calendar  a')[index];
+            if ($(focus_field_new) && $(focus_field_new).size() > 0) {
+              setTimeout(function () {
+                $(focus_field_new).focus();
+              }, 1);
+            } else {
+              if (event.shiftKey && event.altKey) {
+                setTimeout(function () {
+                  jQuery('.ui-datepicker-year').focus();
+                }, 1);
+              } else {
+                setTimeout(function () {
+                  jQuery('button.ui-datepicker-current').focus();
+                }, 1);
+              }
+            }
+          }
+        });
+      });
+    }
+
+    function validateForm(formId) {
+        if (!formId) {
+            throw "The param 'formId' is required.";
+        }
+        try {
+
+            var errorCount = 0;
+
+            var validateFormFields = function (formFields) {
+                for (var i = 0; i < formFields.length; i++) {
+                    var formField = jQuery(formFields[i]);
+                    errorCount += validateField(formField).length;
+                }
+            }
+
+            var inputFields = jQuery("#" + formId + " input[formField=true][type!='radio']");
+            validateFormFields(inputFields);
+            var textareaFields = jQuery("#" + formId + " textarea[formField=true]");
+            validateFormFields(textareaFields);
+            var selectFields = jQuery("#" + formId + " select[formField=true]");
+            validateFormFields(selectFields);
+            var radioFields = jQuery("#" + formId + " input[formField=true][type='radio']:checked");
+            validateFormFields(radioFields);
+
+            return errorCount <= 0;
+        } catch (e) {
+            console.log(e);
+        }
+        return false;
+    }
+
+    function printFieldErrors(formField, errors) {
+        var name = formField.attr("name") || formField.attr(_form_validation.attr.fieldName);
+        name = name.replace(".", "_");
+        var errorDisplay = jQuery("#" + _form_validation.errorDisplayPrefix + name);
+        if (errorDisplay) {
+            var html = "";
+            if (errors && errors.length > 0) {
+                for (var i = 0; i < errors.length; i++) {
+                    html += (( i != 0 ? "<br/>*&nbsp;&nbsp;&nbsp;&nbsp;" : "*&nbsp;&nbsp;&nbsp;&nbsp;") + errors[i]);
+                }
+            }
+            jQuery(errorDisplay).html(html);
+        }
+    }
+
+    function validateField(formField) {
+        var messageField = jQuery("#_form_error_msg");
+        var fieldName = formField.attr("name");
+        var fieldNamePrefix = fieldName + "_";
+        var errors = [];
+        var fieldType = formField.attr(_form_validation.attr.fieldType);
+        var val = formField.val();
+        var field = formField;
+
+        if (fieldType == _form_validation.availableFieldType.radio) {
+            var f = jQuery("input[name='" + formField.attr(_form_validation.attr.fieldName) + "']:checked");
+            if (f && f.length == 1) {
+                val = f.val();
+                field = f;
+            } else {
+                val = null;
+            }
+        }
+
+        var checkField = function () {
+            if (fieldType == _form_validation.availableFieldType.numeric) {
+                // test data type
+                var fieldTypeMatched = _form_validation.fieldTypeReg.numeric.test(val);
+                if (!fieldTypeMatched) {
+                    errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.fieldType) || "Data type is mismatched.");
+                } else {
+                    // check max & min value
+                    var maxValue = formField.attr(_form_validation.attr.maxValue);
+                    var minValue = formField.attr(_form_validation.attr.minValue);
+                    if (maxValue && (parseFloat(val) > parseFloat(maxValue))) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.maxValue) || ("The max value is " + maxValue + "."));
+                    }
+                    if (minValue && (parseFloat(val) < parseFloat(minValue))) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.minValue) || ("The min value is " + maxValue + "."));
+                    }
+                }
+            }
+            else if (fieldType == _form_validation.availableFieldType.date) {
+                var dateFormat = formField.attr(_form_validation.attr.dateFormat);
+                if (dateFormat) {
+                    var date = null;
+                    try {
+                        date = jQuery.datepicker.parseDate(dateFormat, val);
+                    } catch (e) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.fieldType) || "Invalid date format.");
+                    }
+                    if (date) {
+                        var maxDateOption = formField.datepicker("option", "maxDate");
+                        var maxDate = jQuery.datepicker._determineDate(date, maxDateOption);
+                        var minDateOption = formField.datepicker("option", "minDate");
+                        var minDate = jQuery.datepicker._determineDate(date, minDateOption);
+
+                        if (maxDate && date.getTime() > maxDate.getTime()) {
+                            errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.maxValue) || ("The max value is " + maxValue + "."));
+                        }
+                        if (minDate && date.getTime() < minDate.getTime()) {
+                            errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.minValue) || ("The min value is " + maxValue + "."));
+                        }
+                    }
+                }
+            }
+            else if (fieldType == _form_validation.availableFieldType.radio) {
+                var dateFormat = formField.attr(_form_validation.attr.dateFormat);
+                if (dateFormat) {
+                    var date = null;
+                    try {
+                        date = jQuery.datepicker.parseDate(dateFormat, val);
+                    } catch (e) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.fieldType) || "Invalid date format.");
+                    }
+                    if (date) {
+                        var maxDate = formField.datepicker("option", "maxDate");
+                        var minDate = formField.datepicker("option", "minDate");
+
+                        if (maxDate && date.getTime() > maxDate.getTime()) {
+                            errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.maxValue) || ("The max value is " + maxValue + "."));
+                        }
+                        if (minDate && date.getTime() < minDate.getTime()) {
+                            errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.minValue) || ("The min value is " + maxValue + "."));
+                        }
+                    }
+                }
+            }
+            else {
+                var regExpr = formField.attr(_form_validation.attr.regExpr);
+                if (regExpr) {
+                    var flag = false;
+                    try {
+                        var reg = new RegExp(regExpr);
+                        flag = reg.test(val)
+                    } catch (e) {
+                    }
+
+                    if (!flag) {
+                        errors.push(messageField.attr(fieldNamePrefix + _form_validation.attr.regExpr) || ("Mismatched regular expression: " + regExpr + ""));
+                    }
+                }
+            }
+        }
+        //check if answer is require.
+        var required = formField.attr(_form_validation.attr.required);
+        if (required) {
+            if (val) {
+                checkField()
+            } else {
+                errors.push(formField.attr(fieldNamePrefix + _form_validation.attr.required) || "Value is required.");
+            }
+        }
+        else {
+            checkField()
+        }
+        console.log('errors', errors);
+        printFieldErrors(field, errors);
+        return errors;
+    }
+
+    function showModalMask(modalDivId) {
+        jQuery(".modal-backdrop").show();
+    }
+
+    function hideModalMask(modalDivId) {
+        jQuery(".modal-backdrop").hide();
+    }
+
+    function openModal(modalDivId) {
+        jQuery("#" + modalDivId).show(150);
+        jQuery("#" + modalDivId).addClass("in");
+        showModalMask();
+    }
+
+    function closeModal(modalDivId) {
+        jQuery("#" + modalDivId).hide(150);
+        jQuery("#" + modalDivId).removeClass("in");
+        hideModalMask();
+    }
+
+    function showDialog(title, bodyContent) {
+        var _defaultDialog = jQuery("#_defaultDialog");
+        if (_defaultDialog) {
+            var titleElement = jQuery("#_defaultDialog h4[name='title']");
+            if (titleElement) {
+                jQuery(titleElement).html(title)
+            }
+
+            var body = jQuery("#_defaultDialog div[name='body']");
+            if (body) {
+                jQuery(body).html(bodyContent);
+            }
+
+            var closeBtn = jQuery("#_defaultDialog button[name='close']");
+            if (closeBtn) {
+                jQuery(closeBtn).bind('click', function () {
+                    jQuery(closeBtn).hide(150);
+                    jQuery(closeBtn).removeClass("in");
+                    hideModalMask();
+                });
+            }
+
+            _defaultDialog.show(150);
+            _defaultDialog.addClass("in");
+            jQuery(".modal-backdrop").show();
+        }
+    }
+
+    function _disableFormSubmit() {
+        var submitButtons = jQuery("[type!='submit']");
+        for (var i = 0; i < submitButtons.length; i++) {
+            var btn = submitButtons[i];
+            jQuery(btn).bind("click", function () {
+//                console.log("disable submit");
+                return false;
+            });
+        }
+    }
+
+    function disableFormSubmit() {
+        var submitButtons = jQuery("[type='submit']");
+        for (var i = 0; i < submitButtons.length; i++) {
+            var btn = submitButtons[i];
+            jQuery(btn).bind("click", function () {
+                console.log("disable submit");
+                return false;
+            });
+        }
+    }
+    /**
+     * add  init smartPhone  dateField
+     */
+    function initSmartPhoneDateFields(){
+      var dateFields = jQuery("input[" + _form_validation.attr.fieldType + "='"
+                       + _form_validation.availableFieldType.date + "']");
+      for (var i = 0; i < dateFields.length; i++) {
+        var field = jQuery(dateFields[i]);
+        var config = {
+          availableDays: field.attr("availableDays") || ''
+        };
+        field.mobileDatePicker(config);
+      }
+    }
+
+    initDateFields();
+    
+    jQuery(document).ready(function () {
+//            initSmartPhoneDateFields();
+        //     initDateFields();
+    });
+
+</script></body>
+</html>

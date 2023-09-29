@@ -1,0 +1,85 @@
+﻿
+.dark_grey_noise_bg 
+{
+    background: url("../../../images/sallie_mae_images/about/dark_grey_noise_bg.jpg");
+}
+
+.border_bottom {
+    border-bottom: 1px solid #CCC;
+    padding: 0px 15px 20px;
+    position: relative;
+}
+
+.width_100 h1 {
+    color: #898989;    
+    font-size: 3.2em;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+#main .multicolumn_column_container {
+    border-right: 1px solid #c3c3c3;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left:0;
+    margin-right:0;
+}
+
+.multicolumn_column:first-child .multicolumn_column_container {
+    border-left: none;
+    margin-right:0;
+}
+
+.multicolumn_column.width_last > .multicolumn_column_container {
+    border-right: medium none;
+}
+
+.multicolumn_row .multicolumn_column.width_100 .multicolumn_column_container {
+    padding-top: 15px;
+    border-right:none;
+}
+
+#main .multicolumn_row .multicolumn_column h3 {
+    color: #008DC9;
+    font-size: 1.9em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin-top: 0em;
+}
+
+#main .multicolumn_row.categories .multicolumn_column a {
+    padding: 15px;
+    display: block;
+    color: #333333;
+    min-height: 155px;
+    font-family: "Source Sans Regular";   
+}
+
+#main .multicolumn_row.categories .multicolumn_column a:hover {
+    background: url("../../images/sallie_mae_images/about/dark_grey_noise_bg.jpg");
+    color: #333333;
+}
+
+#main .multicolumn_row.categories .multicolumn_column h3 img {
+    margin: 0 0 2px 7px;
+}
+
+#main_right_unit:first-child #main_content_right_rail_unit:first-child #main_content 
+{
+    padding-top: 0px;
+}
+
+.multicolumn_row + .multicolumn_row {
+    margin-top: 40px;
+}
+
+.multicolumn_row + .multicolumn_row.categories {
+    margin-top: 25px;
+}
+
+#footer_top_border
+{
+    padding: 0;    
+}
