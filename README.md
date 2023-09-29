@@ -1,55 +1,28 @@
-https://cmc-kumar.github.io/csh/Account%20Summary-9.html
-
-https://cmc-kumar.github.io/csh/Account%20Summary.html
-
-https://cmc-kumar.github.io/csh/Add%20New%20Bank%20Account.html
-
-https://cmc-kumar.github.io/csh/Add%20New%20Card%20Account.html
-
-https://cmc-kumar.github.io/csh/Appointment-2.html
-
-https://cmc-kumar.github.io/csh/Appointment-3.html
-
-https://cmc-kumar.github.io/csh/Appointment.html
-
-https://cmc-kumar.github.io/csh/Delete%20Scheduled%20Appointment.html
-
-https://cmc-kumar.github.io/csh/Login.html
-
-https://cmc-kumar.github.io/csh/Make%20a%20Payment.html
-
-https://cmc-kumar.github.io/csh/Manage%20Payment%20Methods.html
-
-https://cmc-kumar.github.io/csh/Payment%20Details.html
-
-https://cmc-kumar.github.io/csh/Payment%20Offer%20Accepted.html
-
-https://cmc-kumar.github.io/csh/Payment%20Offers.html
-
-https://cmc-kumar.github.io/csh/Promise%20To%20Pay%20Accepted.html
-
-https://cmc-kumar.github.io/csh/Promise%20To%20Pay%20Deleted.html
-
-https://cmc-kumar.github.io/csh/Promise%20To%20Pay%20Details-5.html
-
-https://cmc-kumar.github.io/csh/Promise%20To%20Pay%20Details.html
-
-https://cmc-kumar.github.io/csh/Promise%20To%20Pay-1.html
-
-https://cmc-kumar.github.io/csh/Promise%20To%20Pay-3.html
-
-https://cmc-kumar.github.io/csh/Promise%20To%20Pay.html
-
-https://cmc-kumar.github.io/csh/Schedule%20Appointment%20Confirmation.html
-
-https://cmc-kumar.github.io/csh/Schedule%20Appointment%20List-2.html
-
-https://cmc-kumar.github.io/csh/Schedule%20Appointment%20List.html
-
-https://cmc-kumar.github.io/csh/Update%20Contact%20Confirmation.html
-
-https://cmc-kumar.github.io/csh/Update%20Contact%20Review.html
-
-https://cmc-kumar.github.io/csh/Update%20Contact-2.html
-
-https://cmc-kumar.github.io/csh/Update%20Contact.html
+- [Account Summary-9](https://cmc-kumar.github.io/csh/Account%20Summary-9.html)
+- [Account Summary](https://cmc-kumar.github.io/csh/Account%20Summary.html)
+- [Add New Bank Account](https://cmc-kumar.github.io/csh/Add%20New%20Bank%20Account.html)
+- [Add New Card Account](https://cmc-kumar.github.io/csh/Add%20New%20Card%20Account.html)
+- [Appointment-2](https://cmc-kumar.github.io/csh/Appointment-2.html)
+- [Appointment-3](https://cmc-kumar.github.io/csh/Appointment-3.html)
+- [Appointment](https://cmc-kumar.github.io/csh/Appointment.html)
+- [Delete Scheduled Appointment](https://cmc-kumar.github.io/csh/Delete%20Scheduled%20Appointment.html)
+- [Login](https://cmc-kumar.github.io/csh/Login.html)
+- [Make a Payment](https://cmc-kumar.github.io/csh/Make%20a%20Payment.html)
+- [Manage Payment Methods](https://cmc-kumar.github.io/csh/Manage%20Payment%20Methods.html)
+- [Payment Details](https://cmc-kumar.github.io/csh/Payment%20Details.html)
+- [Payment Offer Accepted](https://cmc-kumar.github.io/csh/Payment%20Offer%20Accepted.html)
+- [Payment Offers](https://cmc-kumar.github.io/csh/Payment%20Offers.html)
+- [Promise To Pay Accepted](https://cmc-kumar.github.io/csh/Promise%20To%20Pay%20Accepted.html)
+- [Promise To Pay Deleted](https://cmc-kumar.github.io/csh/Promise%20To%20Pay%20Deleted.html)
+- [Promise To Pay Details-5](https://cmc-kumar.github.io/csh/Promise%20To%20Pay%20Details-5.html)
+- [Promise To Pay Details](https://cmc-kumar.github.io/csh/Promise%20To%20Pay%20Details.html)
+- [Promise To Pay-1](https://cmc-kumar.github.io/csh/Promise%20To%20Pay-1.html)
+- [Promise To Pay-3](https://cmc-kumar.github.io/csh/Promise%20To%20Pay-3.html)
+- [Promise To Pay](https://cmc-kumar.github.io/csh/Promise%20To%20Pay.html)
+- [Schedule Appointment Confirmation](https://cmc-kumar.github.io/csh/Schedule%20Appointment%20Confirmation.html)
+- [Schedule Appointment List-2](https://cmc-kumar.github.io/csh/Schedule%20Appointment%20List-2.html)
+- [Schedule Appointment List](https://cmc-kumar.github.io/csh/Schedule%20Appointment%20List.html)
+- [Update Contact Confirmation](https://cmc-kumar.github.io/csh/Update%20Contact%20Confirmation.html)
+- [Update Contact Review](https://cmc-kumar.github.io/csh/Update%20Contact%20Review.html)
+- [Update Contact-2](https://cmc-kumar.github.io/csh/Update%20Contact-2.html)
+- [Update Contact](https://cmc-kumar.github.io/csh/Update%20Contact.html)
