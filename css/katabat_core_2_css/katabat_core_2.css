@@ -37,6 +37,7 @@
     /*padding-top:10px;*/
     height:55px;
     text-align:center;
+        width: 50%;
 }
 
 #mobile_nav > ul > li:first-child + li a {
@@ -60,7 +61,7 @@
 }
 
 #mobile_nav_flyout_left .accordion_content + .accordion {
-    border-top: 1px solid #edeff1;
+    border-top: 0;
 }
 
 /* end header and nav */

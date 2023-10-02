@@ -140,15 +140,8 @@
 
 /* @media 850px */
 @media only screen and (max-width:850px) {
-    .login_page #main{
-        background: #015189;
-    }
-    .login_page .login_title h1{
-        color: #fff;
-    }
-    .login_page #main .article_standard > p{
-        color: #bfe2f3;
-    }
+    
+    
     .login_page .login_table_box{
         width: 100%;
         padding: 15px 5%;

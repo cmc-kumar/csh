@@ -797,7 +797,7 @@ input[type*="radio"]+label {
 
 .list_nav li.item_show .h3 
 {
-    color:#008dc9;
+    color:#00A3DA;
 }
 
 .list_nav li.item_show a:hover .h3
@@ -809,7 +809,7 @@ input[type*="radio"]+label {
 {
     .list_nav .item_on > a .h3, .list_nav .item_on > a:visited .h3, .list_nav .item_on a:hover > .h3, .list_nav .item_on a:active > .h3
 {
-	color:#008dc9;
+	color:#00A3DA;
 }
     .list_nav .section_on > a .h3 {
 	color:#000!important;
@@ -844,7 +844,7 @@ input[type*="radio"]+label {
     }
 
     .responsive .accordion_small > a[href], .responsive .accordion_small > a[href]:active, .responsive .accordion_small > a[href]:visited {
-        color: #008dc9 !important;
+        color: #00A3DA !important;
         text-decoration: none !important;
         cursor: pointer !important;
     }
@@ -862,7 +862,7 @@ input[type*="radio"]+label {
     }
 
     .responsive .accordion_medium > a[href], .responsive .accordion_medium > a[href]:active, .responsive .accordion_medium > a[href]:visited {
-        color: #008dc9 !important;
+        color: #00A3DA !important;
         text-decoration: none !important;
         cursor: pointer !important;
     }
@@ -880,7 +880,7 @@ input[type*="radio"]+label {
     }
 
     .responsive .accordion_large > a[href], .responsive .accordion_large > a[href]:active, .responsive .accordion_large > a[href]:visited {
-        color: #008dc9 !important;
+        color: #00A3DA !important;
         text-decoration: none !important;
         cursor: pointer !important;
     }
@@ -2560,4 +2560,34 @@ padding-left:0px!important;
 
 /* End Font Awesome Icons */
 
-
+@media only screen and (max-width:767px) {
+    .responsive h1, .responsive .h1 {
+        font-size: 2em;
+    }
+    body{
+        font-size: 100%;
+    }
+    label, label + input + label, input[type*="text"], p, .p, select, .date-row-15-font, #mobile_nav_flyout_left h3.accordion, #mobile_nav_flyout_left .h3.accordion, .button_menu_item [class^="fa"], li, ol li ul li, ul li ol li ul li{
+        font-size: 1em !important;
+    }
+    #footer_container > .article{
+        font-size: 85% !important;
+    }
+    #footer .article p, .responsive #footer_container .article .table-row, #mobile_nav > ul > li:first-child + li {
+        font-size: 0.9em !important;
+    }
+    #mobile_nav > ul > li:first-child a{
+        font-size: 1.8em !important;
+    }
+    .welcome_info{
+        font-size: 0.9em;
+    }
+        .button_menu_item > * {
+    height: auto !important;
+    font-size: 1em;
+}
+.no_more_tables td:before{
+    font-size: 1em;
+    line-height: 2.3em;
+}
+}

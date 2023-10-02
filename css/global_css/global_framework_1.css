@@ -2156,7 +2156,7 @@ border-right:none;
     margin-top:.6em;
 }
     .responsive .accordion_content + .accordion_small:not(*:root) {
-    margin-top:1em;
+    margin-top:0;
 }
     .responsive .accordion_medium + .accordion_content, .responsive .accordion_large + .accordion_content {
         height:auto;
@@ -2181,7 +2181,7 @@ border-right:none;
     margin-top:.6em;
 }
     .responsive .accordion_content + .accordion_medium:not(*:root) {
-    margin-top:1em;
+    margin-top:0;
 }
     .responsive .accordion_small + .accordion_content, .responsive .accordion_large + .accordion_content {
         height:auto;

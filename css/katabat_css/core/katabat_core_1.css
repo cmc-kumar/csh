@@ -159,7 +159,7 @@ li .button_menu_item
 
 #mobile_nav_flyout_left .button_menu_item, #mobile_nav_flyout_right .button_menu_item  
 {
-   padding: .8em 1.5em .8em 1.5em;
+   padding: .8em 1em .8em 1em;
 }
 
 .button_menu_item+.button_menu_item 
@@ -551,7 +551,7 @@ background:#fff;
 
 .bg_off_white, a.bg_off_white, a.bg_off_white:visited, a.bg_off_white:hover, .responsive a[href]:hover.bg_off_white, a.bg_off_white:active
 {
-    background-color: #f9f9f9;
+    background-color: #F1F5F9;
     color: #000!important;
 }
 
@@ -1159,7 +1159,7 @@ margin-left:0px;
 
 #mobile_nav > ul > li:first-child a 
 {
-   font-size: 3.2em!important;
+   font-size: 2.8em;
    padding: 5px 21px 17px 19px;
    min-width:27px;
 }
@@ -1194,15 +1194,14 @@ margin-left:0px;
 }
 
 #mobile_nav > ul > li:last-child {
-    text-align:center;
+    text-align:left;
     z-index:0;
 }
 
 #mobile_nav > ul > li:last-child a 
 {
-   padding: 5px 0px 0px 5px;
-   height: 50px;
-   line-height: 50px;
+   padding: 5px 5px 0px 5px;
+
 }
 
 #mobile_nav ul li:first-child+li a {
@@ -1211,7 +1210,8 @@ border-right: none;
 
 #mobile_nav > ul > li:last-child img
 {
-    width: 90px;
+    width: auto;
+    max-height: 45px;
 }
 
 #mobile_nav_flyout_left #mobile_nav_flyout_left_container > .button_menu_item:first-child
@@ -1220,6 +1220,7 @@ border-right: none;
     border-top:none;
     background-position: -25px 85px!important;
     border-right:none!important;
+    background-color: #F1F5F9;
 }
 
 #mobile_nav_flyout_left #mobile_nav_flyout_left_container > .button_menu_item:first-child .h3 
@@ -1236,6 +1237,8 @@ border-right: none;
 #mobile_nav_flyout_left #mobile_nav_flyout_left_container > .button_menu_item:first-child > * 
 {
    height:40px!important;
+   line-height: 0px;
+       color: #2C2D2E !important;
 }
 
 #mobile_nav_flyout_left h3.accordion:first-child, #mobile_nav_flyout_left .h3.accordion:first-child {
@@ -1247,7 +1250,12 @@ border-right: none;
     color:#000;
     padding-left:25px;
 }
-
+#mobile_nav_flyout_left #mobile_nav_flyout_left_container > .bg_off_white{
+        background-color: #ffffff;
+}
+#mobile_nav_flyout_left #mobile_nav_flyout_left_container > .bg_off_white > .accordion {
+    border-bottom: 1px solid #edeff1;
+}
 /* End Mobile Top Nav */
 
 /* Begin Banner */

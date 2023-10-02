@@ -85,9 +85,7 @@
     .preferred_language {
         margin: 0;
     }
-    .logo {
-        width: 49px!important;
-    }
+   
     .login_page .logo {
         width: 90px!important;
     }
@@ -108,9 +106,7 @@
     .preferred_language {
         margin: 0;
     }
-    .logo {
-        width: 49px!important;
-    }
+   
     .login_page .logo {
         width: 90px!important;
     }
@@ -131,9 +127,7 @@
     .preferred_language {
         margin: 0;
     }
-    .logo {
-        width: 49px!important;
-    }
+    
     .login_page .logo {
         width: 90px!important;
     }
@@ -154,9 +148,7 @@
     .preferred_language {
         margin: 0;
     }
-    .logo {
-        width: 49px!important;
-    }
+   
     .login_page .logo {
         width: 90px!important;
     }
@@ -183,9 +175,7 @@
     .preferred_language {
         margin: 0;
     }
-    .logo {
-        width: 49px!important;
-    }
+    
     .login_page .logo {
         width: 90px!important;
     }
@@ -251,7 +241,7 @@
     display: none;
 }
 
-.logo_mobile{width: 70px!important;}
+.logo_mobile{width: 110px!important;}
 
 .border-bottom-item{
   border-bottom:1px solid #edeff1;
